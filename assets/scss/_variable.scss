@@ -6,7 +6,7 @@
   --color-text-blue: #26396a;
   --color-grey: #666666;
   --color-sub-title: #b2afab;
-
+  --color-tag: rgba(178, 175, 171, 0.6);
   --font-primary: "SF Pro Display";
 }
 
@@ -49,21 +49,29 @@ body {
   line-height: 24px;
   font-weight: 400;
 }
-.font-normal{
+.tag-font {
+  font-size: 12px;
+  line-height: 16px;
   font-weight: 400;
 }
-.font-semibold{
+.font-normal {
+  font-weight: 400;
+}
+.font-semibold {
   font-weight: 600;
 }
-.font-bold{
+.font-bold {
   font-weight: 700;
 }
-.font-meidum{
+.font-meidum {
   font-weight: 500;
 }
 // color
 .color-primary {
   color: var(--color-primary);
+}
+.color-secondary {
+  color: var(--color-secondary);
 }
 .color-black {
   color: var(--color-black);
@@ -77,10 +85,17 @@ body {
 .color-heading {
   color: var(--color-text-blue);
 }
+.color-sub-title {
+  color: var(--color-sub-title);
+}
 // spacing
 .gap-32 {
   gap: 32px;
 }
 .spacing {
   height: 80px;
+}
+// typography
+.text-uppcase {
+  text-transform: uppercase !important;
 }

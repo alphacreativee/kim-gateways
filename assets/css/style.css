@@ -6,6 +6,7 @@
   --color-text-blue: #26396a;
   --color-grey: #666666;
   --color-sub-title: #b2afab;
+  --color-tag: rgba(178, 175, 171, 0.6);
   --font-primary: "SF Pro Display";
 }
 
@@ -54,6 +55,12 @@ body {
   font-weight: 400;
 }
 
+.tag-font {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
 .font-normal {
   font-weight: 400;
 }
@@ -74,6 +81,10 @@ body {
   color: var(--color-primary);
 }
 
+.color-secondary {
+  color: var(--color-secondary);
+}
+
 .color-black {
   color: var(--color-black);
 }
@@ -90,12 +101,20 @@ body {
   color: var(--color-text-blue);
 }
 
+.color-sub-title {
+  color: var(--color-sub-title);
+}
+
 .gap-32 {
   gap: 32px;
 }
 
 .spacing {
   height: 80px;
+}
+
+.text-uppcase {
+  text-transform: uppercase !important;
 }
 
 *,
@@ -289,6 +308,82 @@ body {
 .banner-hero__content h2 span {
   color: var(--color-primary);
   font-weight: bold;
+}
+
+.blogs-list {
+  padding: 0 120px;
+}
+.blogs-list__top {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.blogs-list__sub {
+  gap: 8px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.blogs-list__filter {
+  margin-bottom: 60px;
+}
+.blogs-list__button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.blogs-list__button .filter-button {
+  padding: 12px 24px;
+  border-radius: 24px;
+  color: var(--color-primary);
+  border: 1px solid #d4d3d8;
+  transition: all 0.4s;
+}
+.blogs-list__button .filter-button.active {
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+.blogs-list__button .filter-button:hover {
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  cursor: pointer;
+}
+.blogs-list__result {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px 40px;
+  margin-bottom: 60px;
+}
+.blogs-list__item:hover .blogs-list__img img {
+  transform: scale(1.05);
+}
+.blogs-list__img {
+  border-radius: 16px;
+  width: 100%;
+  aspect-ratio: 375/270;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.blogs-list__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+.blogs-list__box {
+  position: relative;
+}
+.blogs-list__tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  border-radius: 24px;
+  padding: 6px 12px;
+  background-color: var(--color-tag);
+  z-index: 3;
+}
+.blogs-list__content .name {
+  margin-bottom: 12px;
 }
 
 /*# sourceMappingURL=style.css.map */
