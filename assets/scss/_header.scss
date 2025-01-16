@@ -1,0 +1,41 @@
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+  .header{
+    &__container {
+      padding: 26px 0;
+    }
+
+    &__logo {
+      display: block;
+      width: auto;
+      height: 52px;
+    }
+
+    &__menu {
+      ul {
+        display: flex;
+        gap: 17px;
+
+        a{
+          color: var(--color-white);
+          transition: all 0.4s ease;
+  
+          &:hover{
+            color: var(--color-secondary);
+          }
+        }
+  
+        li.active{
+          a{
+            color: var(--color-secondary);
+          }
+        }
+      }
+    }
+  }
+}
