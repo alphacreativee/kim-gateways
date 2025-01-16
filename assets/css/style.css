@@ -1,11 +1,11 @@
 :root {
   --color-primary: #214080;
-  --color-secondary:#EC9231;
+  --color-secondary: #ec9231;
   --color-black: #000000;
   --color-white: #ffffff;
-  --color-text-blue: #26396A;
+  --color-text-blue: #26396a;
   --color-grey: #666666;
-  --color-sub-title: #B2AFAB;
+  --color-sub-title: #b2afab;
   --font-primary: "SF Pro Display";
 }
 
@@ -71,6 +71,10 @@ body {
 
 .gap-32 {
   gap: 32px;
+}
+
+.spacing {
+  height: 80px;
 }
 
 *,
