@@ -1,0 +1,21 @@
+.section-cta{
+    .wrapper-content{
+        padding: 60px;
+        padding-bottom: 40px;
+        background-image: url("../images/img-section-cta.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .content{
+        max-width: 55%;
+        
+        .desc{
+            margin-top: 12px;
+        }
+
+        .btn--custom{
+            margin-top: 40px;
+        }
+    }
+}

@@ -1,3 +1,28 @@
+"use strict";
+$ = jQuery;
+
+$(document).ready(function(){
+    header();
+    createFilter();
+})
+
+gsap.registerPlugin(ScrollTrigger);
+
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
+});
+
+function header(){
+  ScrollTrigger.create({
+    start: "top top",
+    end: 99999,
+    onUpdate: (self) => {
+        self.direction === 1 ? $('header').addClass('header--scroll') : '';
+        self.progress === 0 ? $('header').removeClass('header--scroll') : '';
+    },
+  });
+}
+
 function createFilter() {
   $(".blogs-list__filter").each(function () {
     const $filterSection = $(this);
@@ -31,4 +56,3 @@ function createFilter() {
     });
   });
 }
-createFilter();

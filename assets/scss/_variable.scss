@@ -143,3 +143,27 @@ body {
 .text-uppcase {
   text-transform: uppercase !important;
 }
+
+.btn--custom{
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: var(--color-white);
+  transition: all 0.4s ease;
+  background-color: var(--color-primary);
+  padding: 12px 24px;
+  border-radius: 24px;
+
+  &:hover{
+    color: var(--color-white);
+    background-color: var(--color-secondary);
+  }
+
+  &.btn--secondary{
+    background-color: var(--color-secondary);
+  
+    &:hover{
+      background-color: #389ECC;
+    }
+  }
+}
