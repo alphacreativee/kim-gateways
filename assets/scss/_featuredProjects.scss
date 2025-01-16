@@ -1,0 +1,60 @@
+.featured-projects{
+    padding: 120px 0;
+
+    .list-projects{
+        margin-top: 60px;
+    }
+
+    .card{
+        border: none;
+        background-color: transparent;
+
+        &-tag{
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            font-size: 12px;
+            line-height: 16px;
+            font-weight: 600;
+            color: var(--color-white);
+            padding: 6px 12px;
+            background-color: rgba(178, 175, 171, 0.6);
+            border-radius: 24px;
+        }
+
+        &-img{
+            border-radius: 24px;
+            overflow: hidden;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all 0.4s ease;
+                transform: scale(1);
+            }
+        }
+
+        &-content{
+            margin-top: 24px;
+
+            a{
+                transition: all 0.4s ease;
+            }
+        }
+
+        .desc{
+            margin-top: 12px;
+        }
+
+        &:hover{
+            img{
+                transform: scale(1.05);
+            }
+
+            .card-content a{
+                color: var(--color-secondary);
+            }
+        }
+    }
+}
