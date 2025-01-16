@@ -1,11 +1,12 @@
 :root {
   --color-primary: #214080;
-  --color-secondary:#EC9231;
+  --color-secondary: #ec9231;
   --color-black: #000000;
   --color-white: #ffffff;
-  --color-text-blue: #26396A;
+  --color-text-blue: #26396a;
   --color-grey: #666666;
-  --color-sub-title: #B2AFAB;
+  --color-sub-title: #b2afab;
+  --color-tag: rgba(178, 175, 171, 0.6);
   --font-primary: "SF Pro Display";
 }
 
@@ -54,6 +55,12 @@ body {
   font-weight: 400;
 }
 
+.tag-font {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
 .font-normal {
   font-weight: 400;
 }
@@ -74,6 +81,10 @@ body {
   color: var(--color-primary);
 }
 
+.color-secondary {
+  color: var(--color-secondary);
+}
+
 .color-black {
   color: var(--color-black);
 }
@@ -90,8 +101,20 @@ body {
   color: var(--color-text-blue);
 }
 
+.color-sub-title {
+  color: var(--color-sub-title);
+}
+
 .gap-32 {
   gap: 32px;
+}
+
+.spacing {
+  height: 80px;
+}
+
+.text-uppcase {
+  text-transform: uppercase !important;
 }
 
 .sub-title {
@@ -333,145 +356,6 @@ body {
 .banner-hero__content h2 span {
   color: var(--color-primary);
   font-weight: bold;
-}
-
-.about-home {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
-.about-home__wrapper {
-  gap: 80px;
-}
-.about-home__wrapper .wrapper-img {
-  height: 590px;
-  border-radius: 24px;
-  overflow: hidden;
-  width: calc(50% + 40px);
-}
-.about-home__wrapper .wrapper-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-.about-home__wrapper .wrapper-content {
-  width: calc(50% + 40px);
-}
-.about-home__wrapper .list-item {
-  margin-top: 40px;
-}
-.about-home__wrapper .list-item li {
-  gap: 12px;
-}
-.about-home__wrapper .list-item li:not(:first-child) {
-  margin-top: 12px;
-}
-.about-home__wrapper .list-item .icon {
-  min-width: 23px;
-}
-.about-home__wrapper .list-item .content-title {
-  font-size: 18px;
-  line-height: 26px;
-}
-.about-home__wrapper .list-item .content-desc {
-  margin-top: 4px;
-}
-
-.service-home {
-  padding: 0 20px;
-}
-.service-home__wrapper {
-  padding: 120px 100px;
-  border-radius: 24px;
-  overflow: hidden;
-  background-color: var(--color-white);
-  position: relative;
-}
-.service-home__wrapper::after {
-  content: "";
-  width: 50%;
-  height: 50%;
-  position: absolute;
-  top: 60%;
-  left: 0;
-  background-image: url("../images/service-bg-circle.png");
-  background-repeat: no-repeat;
-}
-.service-home .content-left {
-  padding-right: 80px;
-  position: sticky;
-  top: 0;
-  height: max-content;
-}
-.service-home .content-right .list-item {
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-}
-.service-home .content-right .list-item .icon {
-  width: 64px;
-  height: 64px;
-  min-width: 64px;
-}
-.service-home .content-right .list-item .icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.service-home .content-right .list-item .content {
-  margin-left: 24px;
-}
-.service-home .content-right .list-item .content-desc {
-  margin-top: 12px;
-}
-
-.featured-projects {
-  padding: 120px 0;
-}
-.featured-projects .list-projects {
-  margin-top: 60px;
-}
-.featured-projects .card {
-  border: none;
-  background-color: transparent;
-}
-.featured-projects .card-tag {
-  position: absolute;
-  top: 24px;
-  left: 24px;
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 600;
-  color: var(--color-white);
-  padding: 6px 12px;
-  background-color: rgba(178, 175, 171, 0.6);
-  border-radius: 24px;
-}
-.featured-projects .card-img {
-  border-radius: 24px;
-  overflow: hidden;
-}
-.featured-projects .card-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: all 0.4s ease;
-  transform: scale(1);
-}
-.featured-projects .card-content {
-  margin-top: 24px;
-}
-.featured-projects .card-content a {
-  transition: all 0.4s ease;
-}
-.featured-projects .card .desc {
-  margin-top: 12px;
-}
-.featured-projects .card:hover img {
-  transform: scale(1.05);
-}
-.featured-projects .card:hover .card-content a {
-  color: var(--color-secondary);
 }
 
 /*# sourceMappingURL=style.css.map */
