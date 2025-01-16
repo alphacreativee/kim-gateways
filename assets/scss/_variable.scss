@@ -15,36 +15,51 @@ body{
 }
 
 // font
-.h0-f {
-  font-size: 72px;
-  line-height: 82px;
-  font-weight: 900;
+.h1-font {
+  font-size: 40px;
+  line-height: 48px;
 }
-.h1-f {
-  font-size: 64px;
-  line-height: 72px;
-  font-weight: normal;
-}
-.h2-f {
+.h2-font {
   font-size: 32px;
-  line-height: 40px;
-  font-weight: bold;
+  line-height: 38px;
 }
-.h3-f {
+.h3-font {
   font-size: 24px;
-  line-height: 36px;
-  font-weight: normal;
+  line-height: 30px;
+}
+.h3-font {
+  font-size: 24px;
+  line-height: 30px;
+}
+.h4-font {
+  font-size: 20px;
+  line-height: 28px;
 }
 
-.b1-f {
+.b1-font {
   font-size: 16px;
-  line-height: 26px;
-  font-weight: 400;
+  line-height: 24px;
 }
-.button-f {
+.b2-font {
   font-size: 14px;
   line-height: 20px;
-  font-weight: bold;
+}
+.button-font {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+.font-normal{
+  font-weight: 400;
+}
+.font-semibold{
+  font-weight: 600;
+}
+.font-bold{
+  font-weight: 700;
+}
+.font-meidum{
+  font-weight: 500;
 }
 // color
 .color-primary {
