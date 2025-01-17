@@ -64,6 +64,8 @@ function swiperBanner() {
 }
 
 function header(){
+  if(!$(".banner-hero").length) return;
+  
   ScrollTrigger.create({
     start: "top top",
     end: 99999,

@@ -1,0 +1,23 @@
+section.img-with-text{
+    position: relative;
+
+    .content{
+        position: absolute;
+        width: 40%;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%);
+    }
+
+    .desc{
+        margin-top: 24px;
+    }
+
+    img{
+        width: 100%;
+        aspect-ratio: 1440 / 635;
+        max-height: 635px;
+        object-position: center;
+        object-fit: cover;
+    }
+}

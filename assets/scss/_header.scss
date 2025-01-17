@@ -15,6 +15,12 @@
     visibility: hidden;
   }
 
+  &.bg-white{
+    & + .blank-spacing{
+      height: 100px;
+    }
+  }
+
   &.header--scroll{
     background-color: var(--color-white);
     box-shadow: 0px 2px 4px 0px #BDBDBD1A;
