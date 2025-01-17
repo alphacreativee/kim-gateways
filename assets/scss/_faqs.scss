@@ -60,7 +60,11 @@
             border: 1px solid #BDBDBD99;
             border-radius: 12px;
             overflow: hidden;
-            transition: all 0.7s ease;
+            transition: all 0.4s ease;
+
+            &:hover{
+                border-color: #BDBDBD;
+            }
 
             &:has([aria-expanded="true"]){
                 transition: all 0.7s ease;

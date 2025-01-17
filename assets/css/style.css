@@ -1004,7 +1004,10 @@ section.img-with-text img {
   border: 1px solid rgba(189, 189, 189, 0.6);
   border-radius: 12px;
   overflow: hidden;
-  transition: all 0.7s ease;
+  transition: all 0.4s ease;
+}
+.section-faqs .content-right .accordion-item:hover {
+  border-color: #BDBDBD;
 }
 .section-faqs .content-right .accordion-item:has([aria-expanded=true]) {
   transition: all 0.7s ease;
