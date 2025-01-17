@@ -1,0 +1,41 @@
+.customer-story{
+    padding-top: 120px;
+
+    .list-story{
+        margin-top: 60px;
+
+        .box{
+            padding: 40px;
+            height: 100%;
+            border-radius: 24px;
+            overflow: hidden;
+            background-color: var(--color-white);
+
+            &-head{
+                display: flex;
+                align-items: center;
+
+                .avt{
+                    width: 64px;
+                    height: 64px;
+                    min-width: 64px;
+                }
+
+                .name{
+                    font-size: 24px;
+                    line-height: 32px;
+                    margin-left: 24px;
+                }
+            }
+
+            &-desc{
+                margin-top: 24px;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 5;
+                        line-clamp: 5; 
+                -webkit-box-orient: vertical;
+            }
+        }
+    }
+}

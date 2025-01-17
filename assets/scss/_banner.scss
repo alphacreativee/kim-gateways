@@ -4,6 +4,26 @@
     height: 100vh;
     position: relative;
     overflow: hidden;
+
+    .swiper-banner {
+      width: 100%;
+      height: 100%;
+      .swiper-slide {
+        overflow: hidden;
+      }
+      .slide-banner {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
     video {
       position: absolute;
       right: 0;
