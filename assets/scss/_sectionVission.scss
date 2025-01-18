@@ -1,0 +1,11 @@
+.section-vission{
+    background-image: url("../images/banner.png");
+    .list-item{
+        gap: 40px;
+        padding: 120px 0;
+
+        li{
+            width: calc(50% - 20px);
+        }
+    }
+}

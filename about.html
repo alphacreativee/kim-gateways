@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact</title>
+    <title>About</title>
     <!-- import favicon -->
     <link
       rel="icon"
@@ -29,13 +29,12 @@
     <!-- import font -->
     <link rel="stylesheet" href="./assets/font/SF_Pro_Display/stylesheet.css" />
     <!-- end import font -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/css/intlTelInput.min.css">
     <!-- import link custom css page -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- end link custom css page -->
   </head>
   <body>
-    <header id="header" class="header--scroll bg-white">
+    <header id="header">
       <div class="container">
         <div class="header__container">
           <div class="row g-0">
@@ -52,10 +51,10 @@
                 <ul
                   class="d-flex align-items-center justify-content-center gap-20"
                 >
-                  <li>
+                  <li >
                     <a href="./index.html" class="button-f color-white">Trang chủ</a>
                   </li>
-                  <li>
+                  <li class="active">
                     <a href="./about.html" class="button-f color-white">Về Kim Gateways</a>
                   </li>
                   <li>
@@ -67,7 +66,7 @@
                   <li>
                     <a href="./blogs.html" class="button-f color-white">Blogs</a>
                   </li>
-                  <li class="active">
+                  <li>
                     <a href="./contact.html" class="button-f color-white">Liên hệ</a>
                   </li>
                 </ul>
@@ -77,110 +76,89 @@
         </div>
       </div>
     </header>
-    <div class="blank-spacing"></div>
     <main>
-        <section class="contact-form">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="contact-form__left col-lg-6 col-12">
-                        <div class="sub-title">Liên hệ</div>
-                        <h1 class="title">Chúng tôi trân trọng mọi ý kiến <span style="color: #EC9231;">đến từ bạn</span></h1>
-                        <div class="info">
-                            <a href="tel:+84909737747" class="b1-font font-bold">+84 90 9737 747</a>
-                            <div class="mail d-flex align-items-center">
-                                <a href="mailto:info@kimgateways.com" class="b1-font font-normal">info@kimgateways.com</a>
-                                <span>•</span>
-                                <a href="mailto:kim@kimgateways.com" class="b1-font font-normal">kim@kimgateways.com</a>
-                            </div>
-                            <div class="address b1-font font-normal">3/9 Hùng Long Tự 1, Ấp Suối Đá, Xã Dương Tơ, Phường Dương Đông, TP. Phú Quốc, Tỉnh Kiên Giang</div>
-                        </div>
-                    </div>
-                    <div class="contact-form__right col-lg-6 col-12">
-                        <form action="">
-                            <div class="field">
-                                <label for="name">Họ và Tên</label>
-                                <input type="text" name="name" placeholder="Nhập tên">
-                            </div>
-                            <div class="field">
-                                <label for="name">Email</label>
-                                <input type="text" name="email" placeholder="Nhập email">
-                            </div>
-                            <div class="field">
-                                <label for="name">Số điện thoại</label>
-                                <input type="tel" id="phone">
-                            </div>
-                            <div class="field">
-                                <label for="name">Tin nhắn</label>
-                                <textarea name="message" placeholder="Nhập nội dung tin nhắn" ></textarea>
-                            </div>
-                            <button type="submit" class="btn--custom btn--primary w-100">Gửi</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="img-with-text">
+        <section class="banner-hero">
             <div class="container-fluild p-0">
-                <img src="./assets/images/image-with-text.png" alt="">
-                <div class="content">
-                    <h2 class="h1-font font-semibold color-white">Sẵn sàng đồng hành, hỗ trợ tận tâm, bất kể khi nào bạn cần</h2>
-                    <div class="desc h4-font color-white font-normal">Chúng tôi hiểu rằng mỗi phút giây của bạn đều quý giá. Đội ngũ Kim Gateways luôn sẵn sàng hỗ trợ tận tâm, bất kể thời gian hay địa điểm. Từ việc giải đáp thắc mắc đến xử lý vấn đề phát sinh, bạn có thể yên tâm tận hưởng dịch vụ với sự đồng hành đáng tin cậy của chúng tôi.</div>
+              <div class="banner-hero__container">
+                <div class="swiper swiper-banner">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="slide-banner">
+                        <img srcset="./assets/images/banner.png" alt="">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="slide-banner">
+                        <img srcset="./assets/images/banner.png" alt="">
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
         </section>
-        <section class="section-faqs">
+        <section class="about-home">
             <div class="container">
-                <div class="row g-0">
-                    <div class="col-lg-6 col-12 content-left">
-                        <div class="sub-title">FAQs</div>
-                        <h2 class="title">Giải đáp thắc mắc, đồng hành cùng bạn trên <span style="color: #EC9231;">mọi chặng đường</span></h2>
-                        <div class="desc b1-font color-grey font-normal">
-                            Khám phá mục Câu Hỏi Thường Gặp của chúng tôi để tìm câu trả lời cho nhiều thắc mắc và hiểu rõ hơn về sản phẩm, dịch vụ của chúng tôi.
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-12 content-right">
-                        <div class="accordion" id="accordionFAQ">
-                            <div class="accordion-item">
-                              <h2 class="accordion-header" id="headingFAQ-1">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFAQ-1" aria-expanded="true" aria-controls="collapseFAQ-1">
-                                    Tôi có thể yêu cầu tùy chỉnh tour du lịch theo ý muốn không?
-                                </button>
-                              </h2>
-                              <div id="collapseFAQ-1" class="accordion-collapse collapse show" aria-labelledby="headingFAQ-1" data-bs-parent="#accordionFAQ">
-                                <div class="accordion-body">
-                                    Có, Kim Gateways luôn sẵn sàng thiết kế các tour du lịch tùy chỉnh dựa trên nhu cầu và sở thích của bạn. Chỉ cần liên hệ với đội ngũ của chúng tôi, bạn sẽ nhận được sự hỗ trợ tận tâm để tạo nên hành trình hoàn hảo.
-                                </div>
-                              </div>
-                            </div>
-                            <div class="accordion-item">
-                              <h2 class="accordion-header" id="headingFAQ-2">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFAQ-2" aria-expanded="false" aria-controls="collapseFAQ-2">
-                                    Dịch vụ tư vấn du lịch có miễn phí không?
-                                </button>
-                              </h2>
-                              <div id="collapseFAQ-2" class="accordion-collapse collapse" aria-labelledby="headingFAQ-2" data-bs-parent="#accordionFAQ">
-                                <div class="accordion-body">
-                                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the, though the transition does limit overflow.
-                                </div>
-                              </div>
-                            </div>
-                            <div class="accordion-item">
-                              <h2 class="accordion-header" id="headingFAQ-3">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFAQ-3" aria-expanded="false" aria-controls="collapseFAQ-3">
-                                    Làm thế nào để tích hợp hệ thống đặt chỗ lưu trú trực tuyến vào website?
-                                </button>
-                              </h2>
-                              <div id="collapseFAQ-3" class="accordion-collapse collapse" aria-labelledby="headingFAQ-3" data-bs-parent="#accordionFAQ">
-                                <div class="accordion-body">
-                                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the, though the transition does limit overflow.
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                    </div>
+              <div class="d-flex about-home__wrapper align-items-center flex-row-reverse">
+                <div class="wrapper-img">
+                  <img src="./assets/images/image-kim-gateways-mockup.png" alt="">
                 </div>
+                <div class="wrapper-content">
+                  <div class="sub-title">về chúng tôi</div>
+                  <div class="title">Cung cấp giải pháp đổi mới quản lý, vận hành hiệu quả</div>
+                  <ul class="list-item p-0">
+                    <li class="d-flex align-items-start">
+                      <div class="icon">
+                        <img src="./assets/images/icon-bout-one.svg" alt="">
+                      </div>
+                      <div class="content">
+                        <div class="content-title font-bold color-heading">Tổ chức</div>
+                        <div class="content-desc b1-font color-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus massa vitae tellus suscipit.</div>
+                      </div>
+                    </li>
+                    <li class="d-flex align-items-start">
+                      <div class="icon">
+                        <img src="./assets/images/icon-about-2.svg" alt="">
+                      </div>
+                      <div class="content">
+                        <div class="content-title font-bold color-heading">Vận hành</div>
+                        <div class="content-desc b1-font color-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus massa vitae tellus suscipit.</div>
+                      </div>
+                    </li>
+                    <li class="d-flex align-items-start">
+                      <div class="icon">
+                        <img src="./assets/images/icon-about-3.svg" alt="">
+                      </div>
+                      <div class="content">
+                        <div class="content-title font-bold color-heading">Quản lý</div>
+                        <div class="content-desc b1-font color-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus massa vitae tellus suscipit.</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
         </section>
+        <section class="spacing-80"></section>
+        <section class="spacing-80"></section>
+        <div class="section-vission">
+            <div class="container">
+                <ul class="row g-0 list-item">
+                    <li class="col-lg-6 col-12">
+                        <div class="item">
+                            <div class="name h1-font font-semibold color-heading">Tầm nhìn</div>
+                            <div class="desc color-grey h4-font font-normal">Trở thành cổng dịch vụ hàng đầu trong du lịch và tư vấn, là đối tác đáng tin cậy cung cấp giải pháp toàn diện, từ quản lý khách sạn đến các dịch vụ bổ trợ.</div>
+                        </div>
+                    </li>
+                    <li class="col-lg-6 col-12">
+                        <div class="item">
+                            <div class="name h1-font font-semibold color-heading">Tầm nhìn</div>
+                            <div class="desc color-grey h4-font font-normal">Trở thành cổng dịch vụ hàng đầu trong du lịch và tư vấn, là đối tác đáng tin cậy cung cấp giải pháp toàn diện, từ quản lý khách sạn đến các dịch vụ bổ trợ.</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </main>
     <footer>
       <div class="footer-top">
@@ -272,7 +250,6 @@
     <!-- import lightpick js -->
     <script src="./assets/libs/lightpick.min.js"></script>
     <!-- end import lightpick js -->
-    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/js/intlTelInput.min.js"></script>
     <!-- import custom js -->
     <script src="./assets/js/script.js"></script>
     <!-- end import custom js -->

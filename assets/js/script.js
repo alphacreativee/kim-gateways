@@ -1,11 +1,12 @@
 "use strict";
 $ = jQuery;
 
-$(document).ready(function(){
-    header();
-    createFilter();
-    swiperBanner();
-})
+$(document).ready(function () {
+  header();
+  createFilter();
+  swiperBanner();
+  contactForm();
+});
 
 gsap.registerPlugin(ScrollTrigger);
 window.addEventListener("load", () => {
@@ -25,7 +26,7 @@ function swiperBanner() {
       keyboardControl: true,
       autoplay: {
         delay: 3500,
-        disableOnInteraction: true,
+        disableOnInteraction: true
       },
       on: {
         progress: function (swiper) {
@@ -57,22 +58,22 @@ function swiperBanner() {
               slideInner.style.transition = speed + "ms " + easing;
             }
           });
-        },
-      },
+        }
+      }
     });
   }
 }
 
-function header(){
-  if(!$(".banner-hero").length) return;
-  
+function header() {
+  if (!$(".banner-hero").length) return;
+
   ScrollTrigger.create({
     start: "top top",
     end: 99999,
     onUpdate: (self) => {
-        self.direction === 1 ? $('header').addClass('header--scroll') : '';
-        self.progress === 0 ? $('header').removeClass('header--scroll') : '';
-    },
+      self.direction === 1 ? $("header").addClass("header--scroll") : "";
+      self.progress === 0 ? $("header").removeClass("header--scroll") : "";
+    }
   });
 }
 
@@ -102,10 +103,19 @@ function createFilter() {
 
           gsap.to($resultContainer, {
             autoAlpha: 1,
-            duration: 0.25,
+            duration: 0.25
           });
-        },
+        }
       });
     });
+  });
+}
+
+function contactForm(){
+  const input = document.querySelector("#phone");
+  window.intlTelInput(input, {
+    initialCountry: "vn",
+    separateDialCode: true,
+    loadUtils: () => import("/intl-tel-input/js/utils.js?1733756310855") // for formatting/placeholders etc
   });
 }

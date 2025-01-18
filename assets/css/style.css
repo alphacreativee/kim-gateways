@@ -304,6 +304,14 @@ body {
   margin-top: 40px;
 }
 
+.spacing-80 {
+  height: 80px;
+}
+
+.spacing-120 {
+  height: 120px;
+}
+
 #header {
   position: fixed;
   top: 0;
@@ -526,7 +534,6 @@ footer .name {
 
 .about-home {
   padding-top: 120px;
-  padding-bottom: 120px;
 }
 .about-home__wrapper {
   gap: 80px;
@@ -912,14 +919,17 @@ footer .name {
   font-weight: 500;
   color: #111;
 }
-.contact-form__right form .field input, .contact-form__right form .field textarea {
+.contact-form__right form .field input,
+.contact-form__right form .field textarea {
   background: rgba(180, 180, 180, 0.0901960784);
   border: 1px solid rgba(180, 180, 180, 0.3803921569);
   height: 49px;
   border-radius: 8px;
   padding: 16px;
+  width: 100%;
 }
-.contact-form__right form .field input::placeholder, .contact-form__right form .field textarea::placeholder {
+.contact-form__right form .field input::placeholder,
+.contact-form__right form .field textarea::placeholder {
   color: var(--color-grey);
 }
 .contact-form__right form .field textarea {
@@ -970,7 +980,6 @@ section.img-with-text img {
   border: none;
   box-shadow: unset;
   background-color: transparent;
-  transition: all 0.3s ease;
   position: relative;
 }
 .section-faqs .content-right .accordion-button[aria-expanded=true] {
@@ -1023,6 +1032,17 @@ section.img-with-text img {
   padding: 24px;
   padding-top: 0;
   position: relative;
+}
+
+.section-vission {
+  background-image: url("../images/banner.png");
+}
+.section-vission .list-item {
+  gap: 40px;
+  padding: 120px 0;
+}
+.section-vission .list-item li {
+  width: calc(50% - 20px);
 }
 
 /*# sourceMappingURL=style.css.map */
