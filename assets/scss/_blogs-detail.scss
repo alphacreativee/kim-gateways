@@ -1,0 +1,35 @@
+.page-blogs-detail {
+  .banner-hero__container {
+    height: 60vh;
+  }
+  .blogs-detail-content {
+    padding: 0 120px;
+    padding-top: 60px;
+  }
+  .the-content-top {
+    margin-bottom: 24px;
+  }
+  h2 {
+    margin-bottom: 24px;
+  }
+  figure {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  h4 {
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+  }
+  p {
+    margin-bottom: 40px;
+  }
+  h5 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+  }
+  .blogs-list__result {
+    margin-bottom: 0;
+  }
+}
