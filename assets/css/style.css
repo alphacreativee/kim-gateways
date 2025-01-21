@@ -357,7 +357,7 @@ body {
   color: var(--color-primary);
 }
 #header .header__container {
-  padding: 26px 0;
+  padding: 26px 120px;
 }
 #header .header__logo {
   display: block;
@@ -384,7 +384,7 @@ body {
 }
 
 footer .footer-top {
-  padding: 80px 0;
+  padding: 80px 100px;
   margin: 0 20px;
   border-radius: 24px;
   overflow: hidden;
@@ -480,6 +480,9 @@ footer .footer-consult form input::placeholder {
 }
 footer .footer-consult form button {
   min-width: 110px;
+}
+footer .footer-bottom__container {
+  padding: 0 120px;
 }
 footer .name {
   font-size: 22px;
