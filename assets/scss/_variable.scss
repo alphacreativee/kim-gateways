@@ -88,7 +88,10 @@ body {
 .gap-32 {
   gap: 32px;
 }
-.sub-title{
+.gap-24 {
+  gap: 24px;
+}
+.sub-title {
   font-size: 12px;
   line-height: 16px;
   color: var(--color-grey);
@@ -98,9 +101,9 @@ body {
   font-weight: 700;
   width: max-content;
 
-  &::after{
+  &::after {
     content: "";
-    background-image: url('../images/icon-sub-heading.svg');
+    background-image: url("../images/icon-sub-heading.svg");
     width: 15px;
     height: 14px;
     position: absolute;
@@ -110,7 +113,7 @@ body {
   }
 }
 
-.section-head{
+.section-head {
   max-width: 50%;
   margin: 0 auto;
   display: flex;
@@ -119,20 +122,21 @@ body {
   align-items: center;
 }
 
-.title{
+.title {
   font-size: 40px;
   line-height: 52px;
   font-weight: 600;
   color: var(--color-text-blue);
 }
 
-.sub-title + .title{
+.sub-title + .title {
   margin-top: 20px;
 }
 
-.title + .desc{
+.title + .desc {
   margin-top: 24px;
-}.spacing {
+}
+.spacing {
   height: 80px;
 }
 // typography
@@ -140,7 +144,7 @@ body {
   text-transform: uppercase !important;
 }
 
-.btn--custom{
+.btn--custom {
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
@@ -150,16 +154,16 @@ body {
   padding: 12px 24px;
   border-radius: 24px;
 
-  &:hover{
+  &:hover {
     color: var(--color-white);
     background-color: var(--color-secondary);
   }
 
-  &.btn--secondary{
+  &.btn--secondary {
     background-color: var(--color-secondary);
-  
-    &:hover{
-      background-color: #389ECC;
+
+    &:hover {
+      background-color: #389ecc;
     }
   }
 }

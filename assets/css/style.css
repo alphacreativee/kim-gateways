@@ -105,6 +105,10 @@ body {
   gap: 32px;
 }
 
+.gap-24 {
+  gap: 24px;
+}
+
 .sub-title {
   font-size: 12px;
   line-height: 16px;
@@ -176,7 +180,7 @@ body {
   background-color: var(--color-secondary);
 }
 .btn--custom.btn--secondary:hover {
-  background-color: #389ECC;
+  background-color: #389ecc;
 }
 
 *,
@@ -1098,6 +1102,40 @@ section.img-with-text img {
 .core-value .section-content .wrapper-item .item.active {
   opacity: 1; /* Hiển thị mục */
   transform: translateY(0); /* Trở về vị trí gốc */
+}
+
+.page-blogs-detail .banner-hero__container {
+  height: 60vh;
+}
+.page-blogs-detail .blogs-detail-content {
+  padding: 0 120px;
+  padding-top: 60px;
+}
+.page-blogs-detail .the-content-top {
+  margin-bottom: 24px;
+}
+.page-blogs-detail h2 {
+  margin-bottom: 24px;
+}
+.page-blogs-detail figure {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.page-blogs-detail h4 {
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+.page-blogs-detail p {
+  margin-bottom: 40px;
+}
+.page-blogs-detail h5 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+}
+.page-blogs-detail .blogs-list__result {
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
