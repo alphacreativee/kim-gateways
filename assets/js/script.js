@@ -28,7 +28,7 @@ function swiperBanner() {
       keyboardControl: true,
       autoplay: {
         delay: 3500,
-        disableOnInteraction: true
+        disableOnInteraction: true,
       },
       on: {
         progress: function (swiper) {
@@ -60,8 +60,8 @@ function swiperBanner() {
               slideInner.style.transition = speed + "ms " + easing;
             }
           });
-        }
-      }
+        },
+      },
     });
   }
 }
@@ -75,7 +75,7 @@ function header() {
     onUpdate: (self) => {
       self.direction === 1 ? $("header").addClass("header--scroll") : "";
       self.progress === 0 ? $("header").removeClass("header--scroll") : "";
-    }
+    },
   });
 }
 
@@ -105,9 +105,9 @@ function createFilter() {
 
           gsap.to($resultContainer, {
             autoAlpha: 1,
-            duration: 0.25
+            duration: 0.25,
           });
-        }
+        },
       });
     });
   });
@@ -115,12 +115,13 @@ function createFilter() {
 
 function contactForm() {
   if ($(".contact-form").length < 1) return;
+  if ($(".contact-form").length < 1) return;
 
   const input = document.querySelector("#phone");
   window.intlTelInput(input, {
     initialCountry: "vn",
     separateDialCode: true,
-    loadUtils: () => import("/intl-tel-input/js/utils.js?1733756310855") // for formatting/placeholders etc
+    loadUtils: () => import("/intl-tel-input/js/utils.js?1733756310855"), // for formatting/placeholders etc
   });
 }
 
@@ -236,3 +237,33 @@ function coreValue() {
     }
   });
 }
+// ///////////
+var swiper = new Swiper(".mySwiper", {
+  direction: "vertical",
+  slidesPerView: "auto",
+  loop: true,
+  spaceBetween: 24,
+  autoplay: {
+    delay: 1,
+    reverseDirection: true,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: false,
+  },
+
+  freeMode: true,
+  speed: 10000,
+});
+var swiper2 = new Swiper(".mySwiper2", {
+  direction: "vertical",
+  slidesPerView: "auto",
+  loop: true,
+  spaceBetween: 24,
+  autoplay: {
+    delay: 1,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: false,
+  },
+
+  freeMode: true,
+  speed: 10000,
+});
