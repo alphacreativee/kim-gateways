@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --color-primary: #214080;
   --color-secondary: #ec9231;
@@ -310,6 +311,10 @@ body {
 
 .spacing-120 {
   height: 120px;
+}
+
+.spacing-240 {
+  height: 240px;
 }
 
 #header {
@@ -1040,9 +1045,59 @@ section.img-with-text img {
 .section-vission .list-item {
   gap: 40px;
   padding: 120px 0;
+  transform: translateY(50%);
 }
 .section-vission .list-item li {
   width: calc(50% - 20px);
+}
+.section-vission .list-item li .item {
+  padding: 64px;
+  background: var(--color-white);
+  border-radius: 12px;
+}
+.section-vission .list-item li .desc {
+  margin-top: 24px;
+}
+
+.core-value .section-content {
+  display: flex;
+  gap: 80px; /* Khoảng cách giữa hình ảnh và nội dung */
+  margin-top: 80px;
+}
+.core-value .section-content .wrapper-img {
+  width: calc(50% - 40px);
+  height: 420px;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+}
+.core-value .section-content .wrapper-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0; /* Ẩn tất cả hình ảnh ban đầu */
+  transition: opacity 0.5s ease-out; /* Hiệu ứng chuyển đổi */
+}
+.core-value .section-content .wrapper-img img.active {
+  opacity: 1; /* Hiển thị hình ảnh được active */
+}
+.core-value .section-content .wrapper-item {
+  width: calc(50% - 40px);
+}
+.core-value .section-content .wrapper-item .item {
+  opacity: 0; /* Ẩn mục nội dung ban đầu */
+  transform: translateY(50px); /* Dịch xuống để tạo hiệu ứng */
+  transition: all 0.5s ease-out;
+}
+.core-value .section-content .wrapper-item .item:not(:last-child) {
+  margin-bottom: 250px; /* Khoảng cách giữa các mục */
+}
+.core-value .section-content .wrapper-item .item.active {
+  opacity: 1; /* Hiển thị mục */
+  transform: translateY(0); /* Trở về vị trí gốc */
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -6,6 +6,7 @@ $(document).ready(function () {
   createFilter();
   swiperBanner();
   contactForm();
+  coreValue();
 });
 
 gsap.registerPlugin(ScrollTrigger);
@@ -111,7 +112,9 @@ function createFilter() {
   });
 }
 
-function contactForm(){
+function contactForm() {
+  if($(".contact-form").length < 1) return;
+
   const input = document.querySelector("#phone");
   window.intlTelInput(input, {
     initialCountry: "vn",
@@ -119,3 +122,47 @@ function contactForm(){
     loadUtils: () => import("/intl-tel-input/js/utils.js?1733756310855") // for formatting/placeholders etc
   });
 }
+
+function coreValue() {
+  if ($(".core-value").length < 1) return;
+
+  const items = document.querySelectorAll(".wrapper-item .item"); // Các mục nội dung bên phải
+  const images = document.querySelectorAll(".wrapper-img img"); // Hình ảnh bên trái
+
+  // Đặt ảnh đầu tiên active khi khởi động
+  images[0].classList.add("active");
+
+  // Pin toàn bộ section
+  ScrollTrigger.create({
+    trigger: ".core-value",
+    start: "top top", // Bắt đầu pin khi section chạm đỉnh viewport
+    end: "bottom+=100% top", // Pin kéo dài đến hết section (thêm 100% scroll)
+    pin: ".core-value", // Pin cả section
+    pinSpacing: true, // Duy trì khoảng cách sau pin
+    markers: true, // Hiển thị markers (tắt khi production)
+  });
+
+  // Gắn ScrollTrigger cho từng mục bên phải
+  items.forEach((item, index) => {
+    ScrollTrigger.create({
+      trigger: item, // Mục nội dung bên phải
+      start: "top 80%", // Khi mục gần đáy viewport
+      end: "top 50%", // Khi mục đạt giữa viewport
+      onEnter: () => {
+        // Thêm class active cho mục nội dung
+        item.classList.add("active");
+
+        // Thay đổi trạng thái hình ảnh bên trái
+        images.forEach((img, i) => {
+          img.classList.toggle("active", i === index);
+        });
+      },
+      onLeaveBack: () => {
+        // Xóa class active khi cuộn ngược
+        item.classList.remove("active");
+      },
+    });
+  });
+}
+
+

@@ -1,11 +1,23 @@
 .section-vission{
     background-image: url("../images/banner.png");
+    
     .list-item{
         gap: 40px;
         padding: 120px 0;
+        transform: translateY(50%);
 
         li{
             width: calc(50% - 20px);
+
+            .item{
+                padding: 64px;
+                background: var(--color-white);
+                border-radius: 12px;
+            }
+
+            .desc{
+                margin-top: 24px;
+            }
         }
     }
 }

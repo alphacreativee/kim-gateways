@@ -1,0 +1,49 @@
+.core-value {
+  .section-content {
+    display: flex;
+    gap: 80px; /* Khoảng cách giữa hình ảnh và nội dung */
+    margin-top: 80px;
+
+    .wrapper-img {
+      width: calc(50% - 40px);
+      height: 420px;
+      border-radius: 24px;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0; /* Ẩn tất cả hình ảnh ban đầu */
+        transition: opacity 0.5s ease-out; /* Hiệu ứng chuyển đổi */
+      }
+
+      img.active {
+        opacity: 1; /* Hiển thị hình ảnh được active */
+      }
+    }
+
+    .wrapper-item {
+      width: calc(50% - 40px);
+
+      .item {
+        opacity: 0; /* Ẩn mục nội dung ban đầu */
+        transform: translateY(50px); /* Dịch xuống để tạo hiệu ứng */
+        transition: all 0.5s ease-out;
+
+        &:not(:last-child) {
+          margin-bottom: 250px; /* Khoảng cách giữa các mục */
+        }
+      }
+
+      .item.active {
+        opacity: 1; /* Hiển thị mục */
+        transform: translateY(0); /* Trở về vị trí gốc */
+      }
+    }
+  }
+}
