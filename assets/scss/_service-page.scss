@@ -1,0 +1,93 @@
+.service {
+  &__image {
+    width: 100%;
+    aspect-ratio: 600 / 337;
+    border-radius: 20px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__content {
+    padding-left: 80px;
+    &--top {
+      .icon {
+        margin-bottom: 24px;
+      }
+    }
+  }
+  &__item {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #bdbdbd;
+    &:nth-child(2) {
+      padding-top: 0;
+    }
+  }
+  .blogs-list__top {
+    margin-bottom: 60px;
+  }
+}
+.gallery-sec {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--color-secondary);
+  background-image: url("../images/service-bg-circle.svg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  margin-bottom: 60px;
+  .gallery {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    gap: 24px;
+    justify-content: end;
+    padding-right: 24px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        351.25deg,
+        rgba(236, 146, 49, 0.95) 12.14%,
+        rgba(236, 146, 49, 0) 55.28%
+      );
+      z-index: 2;
+    }
+  }
+  .gallery-col {
+    width: 300px;
+  }
+  .gallery-col .img {
+    width: 300px;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .gallery-col .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-wrapper {
+    -webkit-transition-timing-function: linear !important;
+    -o-transition-timing-function: linear !important;
+    transition-timing-function: linear !important;
+  }
+  .swiper {
+    width: 300px;
+    height: 100vh;
+    margin: 0;
+  }
+  .swiper-slide {
+    height: 300px;
+  }
+}
