@@ -114,7 +114,7 @@ function createFilter() {
 }
 
 function contactForm() {
-  if($(".contact-form").length < 1) return;
+  if ($(".contact-form").length < 1) return;
 
   const input = document.querySelector("#phone");
   window.intlTelInput(input, {
@@ -124,22 +124,24 @@ function contactForm() {
   });
 }
 
-function counterOnScroll(){
-  $(".number").each(function() {
+function counterOnScroll() {
+  if ($(".count-number").length < 1) return;
+
+  $(".number").each(function () {
     const $stat = $(this);
     const patt = /(\D+)?(\d+(\.\d+)?)(\D+)?/;
     const time = 0;
     let result = patt.exec($stat.text());
     let fresh = true;
     let ticks;
-  
+
     if (!result) return;
-  
+
     result.shift();
-    result = result.filter(res => res != null);
-  
+    result = result.filter((res) => res != null);
+
     $stat.empty();
-  
+
     result.forEach((res) => {
       if (isNaN(res)) {
         $stat.append(`<span>${res}</span>`);
@@ -158,21 +160,21 @@ function counterOnScroll(){
         }
       }
     });
-  
+
     ticks = $stat.find("span[data-value]");
-  
+
     const activate = () => {
       const top = $stat[0].getBoundingClientRect().top;
       const offset = $(window).height() * 0.9;
-  
+
       setTimeout(() => {
         fresh = false;
       }, time);
-  
+
       if (top < offset) {
         setTimeout(
           () => {
-            ticks.each(function() {
+            ticks.each(function () {
               const dist = parseInt($(this).attr("data-value")) + 1;
               $(this).css("transform", `translateY(-${dist * 100}%)`);
             });
@@ -182,7 +184,7 @@ function counterOnScroll(){
         $(window).off("scroll", activate);
       }
     };
-    
+
     $(window).on("scroll", activate);
     activate();
   });
@@ -191,43 +193,46 @@ function counterOnScroll(){
 function coreValue() {
   if ($(".core-value").length < 1) return;
 
-  const items = document.querySelectorAll(".wrapper-item .item"); // Các mục nội dung bên phải
-  const images = document.querySelectorAll(".wrapper-img img"); // Hình ảnh bên trái
+  gsap.registerPlugin(ScrollTrigger);
 
-  // Đặt ảnh đầu tiên active khi khởi động
-  images[0].classList.add("active");
+  const panels = gsap.utils.toArray(".panel");
+  const images = gsap.utils.toArray("#left img");
 
-  // Pin toàn bộ section
-  ScrollTrigger.create({
-    trigger: ".core-value",
-    start: "top top", // Bắt đầu pin khi section chạm đỉnh viewport
-    end: "bottom+=100% top", // Pin kéo dài đến hết section (thêm 100% scroll)
-    pin: ".core-value", // Pin cả section
-    pinSpacing: true, // Duy trì khoảng cách sau pin
-    markers: true, // Hiển thị markers (tắt khi production)
+  gsap.set(panels, {
+    yPercent: (i) => (i ? 100 : 0)
   });
 
-  // Gắn ScrollTrigger cho từng mục bên phải
-  items.forEach((item, index) => {
-    ScrollTrigger.create({
-      trigger: item, // Mục nội dung bên phải
-      start: "top 80%", // Khi mục gần đáy viewport
-      end: "top 50%", // Khi mục đạt giữa viewport
-      onEnter: () => {
-        // Thêm class active cho mục nội dung
-        item.classList.add("active");
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".core-value",
+      start: "-140px top",
+      end: () => "+=" + 100 * panels.length + "%",
+      pin: true,
+      scrub: 1,
+      markers: false
+    }
+  });
 
-        // Thay đổi trạng thái hình ảnh bên trái
-        images.forEach((img, i) => {
-          img.classList.toggle("active", i === index);
-        });
-      },
-      onLeaveBack: () => {
-        // Xóa class active khi cuộn ngược
-        item.classList.remove("active");
-      },
-    });
+  panels.forEach((panel, index) => {
+    if (index) {
+      tl.to(
+        panel,
+        {
+          yPercent: 0,
+          ease: "none",
+          onStart: () => {
+            images.forEach((img, imgIndex) => {
+              img.classList.toggle("active", imgIndex === index);
+            });
+          },
+          onReverseComplete: () => {
+            images.forEach((img, imgIndex) => {
+              img.classList.toggle("active", imgIndex === index - 1);
+            });
+          }
+        },
+        "+=0.25"
+      );
+    }
   });
 }
-
-
