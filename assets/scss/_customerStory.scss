@@ -1,6 +1,10 @@
 .customer-story{
     padding-top: 120px;
 
+    @media (max-width: 991px){
+        padding-top: 64px;
+    }
+
     .list-story{
         margin-top: 60px;
         row-gap: 30px;

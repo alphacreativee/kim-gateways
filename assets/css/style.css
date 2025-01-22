@@ -387,18 +387,17 @@ body {
 }
 .dropdown-custom__menu {
   position: absolute;
-  top: calc(100% + 5px);
+  top: 100%;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
   z-index: 11;
-  right: 0;
+  left: -15px;
   width: 100%;
   min-width: 115px;
-  background-color: var(--color-white);
+  background-color: transparent;
   border-radius: 8px;
   padding: 8px;
-  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1019607843);
 }
 .dropdown-custom__menu .dropdown-custom__item {
   width: 100%;
@@ -407,7 +406,7 @@ body {
   cursor: pointer;
   transition: all 0.3s;
   border-radius: 8px;
-  color: var(--color-primary);
+  color: var(--color-white);
   font-size: 16px;
   line-height: 19px;
   font-weight: 600;
@@ -805,6 +804,7 @@ footer .footer-consult form input {
   outline: none;
   box-shadow: unset;
   border-bottom: 1px solid var(--color-white);
+  border-radius: 0;
 }
 footer .footer-consult form input::placeholder {
   color: var(--color-white);
@@ -1067,7 +1067,7 @@ footer .name {
 @media (max-width: 991px) {
   .featured-projects .list-projects {
     margin-top: 32px;
-    row-gap: 24px;
+    row-gap: 32px;
   }
 }
 .featured-projects .card {
@@ -1266,6 +1266,11 @@ footer .name {
 
 .customer-story {
   padding-top: 120px;
+}
+@media (max-width: 991px) {
+  .customer-story {
+    padding-top: 64px;
+  }
 }
 .customer-story .list-story {
   margin-top: 60px;
