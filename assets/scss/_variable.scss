@@ -18,6 +18,11 @@ body {
 .h1-font {
   font-size: 40px;
   line-height: 48px;
+
+  @media (max-width: 767px){
+    font-size: 32px;
+    line-height: 38px;
+  }
 }
 .h2-font {
   font-size: 32px;
@@ -26,10 +31,20 @@ body {
 .h3-font {
   font-size: 24px;
   line-height: 30px;
+
+  @media (max-width: 767px){
+    font-size: 20px;
+    line-height: 28px;
+  }
 }
 .h4-font {
   font-size: 20px;
   line-height: 28px;
+
+  @media (max-width: 767px){
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .b1-font {
@@ -121,7 +136,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 992px){
+  @media (max-width: 991px){
     max-width: 100%;
   }
 }
@@ -131,10 +146,19 @@ body {
   line-height: 52px;
   font-weight: 600;
   color: var(--color-text-blue);
+
+  @media (max-width: 991px){
+    font-size: 32px;
+    line-height: 38px;
+  }
 }
 
 .sub-title + .title {
   margin-top: 20px;
+
+  @media (max-width: 991px){
+    margin-top: 16px;
+  }
 }
 
 .title + .desc {

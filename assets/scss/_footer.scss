@@ -6,6 +6,10 @@ footer{
             border-radius: 24px;
             overflow: hidden;
             background-color: var(--color-primary);
+
+            @media (max-width : 991px){
+                padding: 40px 24px;
+            }
         }
     
         &-company{
@@ -16,10 +20,28 @@ footer{
             display: flex;
             align-items: center;
             gap: 7px;
+
+            @media (max-width: 991px){
+                padding-top: 5px;
+            }
+
+            @media (max-width: 450px){
+                flex-wrap: wrap;
+                gap: 0px;
+
+                span{
+                    margin-left: 10px;
+                }
+            }
+
+            p{
+                white-space: nowrap;
+            }
     
             a{
                 color: var(--color-primary);
                 transition: all 0.4s ease;
+                white-space: nowrap;
     
                 &:hover{
                     color: var(--color-secondary);
@@ -43,6 +65,10 @@ footer{
         &-social{
             margin-top: 40px;
             gap: 24px;
+
+            @media (max-width: 991px){
+                margin-top: 24px;
+            }
     
             li{
                 a{
@@ -69,6 +95,10 @@ footer{
         }
 
         &-contact{
+            @media (max-width: 991px){
+                margin-top: 24px;
+            }
+
             .content{
                 display: flex;
                 flex-direction: column;
@@ -80,6 +110,10 @@ footer{
                 line-height: 24px;
                 font-weight: 400;
                 max-width: 68%;
+
+                @media (max-width: 991px){
+                    max-width: 100%;
+                }
             }
 
             a{
@@ -98,10 +132,23 @@ footer{
         }
 
         &-consult{
+            @media (max-width: 991px){
+                margin-top: 24px;
+
+                .name{
+                    margin-bottom: 10px;
+                }
+            }
+
             form{
                 display: flex;
                 align-items: center;
                 gap: 16px;
+
+                @media (max-width: 400px){
+                    flex-direction: column;
+                    align-items: flex-end !important;
+                }
 
                 input{
                     height: 48px;
@@ -126,6 +173,18 @@ footer{
         &-bottom{
             &__container{
                 padding: 0 120px;
+
+                @media (max-width: 991px){
+                    padding: 0 24px;
+                }
+
+                .copyright{
+                    @media (max-width: 991px){
+                        flex-direction: column-reverse;
+                        align-items: flex-start !important;
+                        margin-top: 24px;
+                    }
+                }
             }
         }
     }
@@ -134,5 +193,10 @@ footer{
         font-size: 22px;
         line-height: 26px;
         margin-bottom: 16px;
+
+        @media (max-width: 767px){
+            font-size: 20px;
+            line-height: 28px;
+        }
     }
 }

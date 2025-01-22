@@ -2,25 +2,25 @@
     padding-top: 120px;
     // padding-bottom: 120px;
 
-    @media (max-width: 992px){
+    @media (max-width: 991px){
         padding-top: 64px;
     }
 
     &__wrapper{
         gap: 80px;
 
-        @media (max-width: 992px){
+        @media (max-width: 991px){
             flex-direction: column-reverse;
         }
 
-        @media (max-width: 768px){
+        @media (max-width: 767px){
             gap: 40px;
         }
 
         .title{
             max-width: 85%;
 
-            @media (max-width: 992px){
+            @media (max-width: 991px){
                 max-width: 100%;
             }
         }
@@ -31,7 +31,7 @@
             overflow: hidden;
             width: calc(100% / 2 + 40px);
 
-            @media (max-width: 992px){
+            @media (max-width: 991px){
                 width: 100%;
             }
 
@@ -46,7 +46,7 @@
         .wrapper-content{
             width: calc(100% / 2 + 40px);
 
-            @media (max-width: 992px){
+            @media (max-width: 991px){
                 width: 100%;
             }
         }
@@ -55,7 +55,7 @@
             margin-top: 40px;
             max-width: 70%;
 
-            @media (max-width: 992px){
+            @media (max-width: 991px){
                 max-width: 100%;
             }
 

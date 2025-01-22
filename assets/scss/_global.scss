@@ -68,7 +68,7 @@ body{
 .spacing-120{
   height: 120px;
 
-  @media (max-width: 992px){
+  @media (max-width: 991px){
     height: 64px;
   }
 }
@@ -200,7 +200,7 @@ button.btn-toggle{
 }
 
 .container{
-  @media (max-width: 768px){
+  @media (max-width: 767px){
     max-width: 100%;
     padding: 0 24px;
   }

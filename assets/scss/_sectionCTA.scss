@@ -5,10 +5,20 @@
         background-image: url("../images/img-section-cta.png");
         background-repeat: no-repeat;
         background-size: 100% 100%;
+        border-radius: 24px;
+
+        @media (max-width: 767px){
+            padding: 40px 24px 80px;
+            background-image: url("../images/img-section-cta-mobile.png");
+        }
     }
 
     .content{
         max-width: 55%;
+
+        @media (max-width: 991px){
+            max-width: 80%;
+        }
         
         .desc{
             margin-top: 12px;
