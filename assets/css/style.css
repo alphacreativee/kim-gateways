@@ -1540,6 +1540,16 @@ section.img-with-text img {
   background-position: bottom left;
   margin-bottom: 60px;
 }
+.gallery-sec__content {
+  padding-left: 120px;
+  max-width: 550px;
+}
+.gallery-sec__content h1 {
+  margin-bottom: 40px;
+}
+.gallery-sec__content a:hover {
+  background-color: #389ecc;
+}
 .gallery-sec .gallery {
   height: 100vh;
   overflow: hidden;

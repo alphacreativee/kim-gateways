@@ -39,6 +39,18 @@
   background-repeat: no-repeat;
   background-position: bottom left;
   margin-bottom: 60px;
+  &__content {
+    padding-left: 120px;
+    max-width: 550px;
+    h1 {
+      margin-bottom: 40px;
+    }
+    a {
+      &:hover {
+        background-color: #389ecc;
+      }
+    }
+  }
   .gallery {
     height: 100vh;
     overflow: hidden;
