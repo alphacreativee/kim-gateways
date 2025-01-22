@@ -1138,7 +1138,6 @@ section.img-with-text img {
   margin-bottom: 0;
 }
 
-<<<<<<< HEAD
 .service__image {
   width: 100%;
   aspect-ratio: 600/337;
@@ -1177,6 +1176,16 @@ section.img-with-text img {
   background-repeat: no-repeat;
   background-position: bottom left;
   margin-bottom: 60px;
+}
+.gallery-sec__content {
+  padding-left: 120px;
+  max-width: 550px;
+}
+.gallery-sec__content h1 {
+  margin-bottom: 40px;
+}
+.gallery-sec__content a:hover {
+  background-color: #389ecc;
 }
 .gallery-sec .gallery {
   height: 100vh;
@@ -1224,7 +1233,8 @@ section.img-with-text img {
 }
 .gallery-sec .swiper-slide {
   height: 300px;
-=======
+}
+
 .count-number__wrapper {
   padding: 40px 57px;
   border-radius: 12px;
@@ -1274,7 +1284,6 @@ section.img-with-text img {
   line-height: 28px;
   font-weight: 600;
   color: var(--color-primary);
->>>>>>> master
 }
 
 /*# sourceMappingURL=style.css.map */
