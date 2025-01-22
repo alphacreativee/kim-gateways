@@ -569,6 +569,9 @@ button.btn-toggle.is-active .line:nth-child(3) {
     transform: translateX(100%);
   }
 }
+#header .header__menu .dropdown-custom__btn {
+  margin-bottom: 1px;
+}
 #header .header__menu .navbar-toggler {
   display: none;
   position: absolute;
