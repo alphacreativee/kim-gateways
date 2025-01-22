@@ -1,8 +1,16 @@
 .featured-projects{
     padding: 120px 0;
 
+    @media (max-width: 992px){
+        padding: 64px 0;
+    }
+
     .list-projects{
         margin-top: 60px;
+
+        @media (max-width: 992px){
+            row-gap: 40px;
+        }
     }
 
     .card{

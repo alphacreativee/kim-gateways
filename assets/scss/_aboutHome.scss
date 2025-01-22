@@ -2,18 +2,38 @@
     padding-top: 120px;
     // padding-bottom: 120px;
 
+    @media (max-width: 992px){
+        padding-top: 64px;
+    }
+
     &__wrapper{
         gap: 80px;
 
+        @media (max-width: 992px){
+            flex-direction: column-reverse;
+        }
+
+        @media (max-width: 768px){
+            gap: 40px;
+        }
+
         .title{
             max-width: 85%;
+
+            @media (max-width: 992px){
+                max-width: 100%;
+            }
         }
 
         .wrapper-img{
-            height: 590px;
+            max-height: 590px;
             border-radius: 24px;
             overflow: hidden;
             width: calc(100% / 2 + 40px);
+
+            @media (max-width: 992px){
+                width: 100%;
+            }
 
             img{
                 width: 100%;
@@ -25,11 +45,19 @@
 
         .wrapper-content{
             width: calc(100% / 2 + 40px);
+
+            @media (max-width: 992px){
+                width: 100%;
+            }
         }
 
         .list-item{
             margin-top: 40px;
             max-width: 70%;
+
+            @media (max-width: 992px){
+                max-width: 100%;
+            }
 
             li{
                 gap: 12px;
