@@ -12,9 +12,19 @@
   }
   &__content {
     padding-left: 80px;
+    @media (max-width: 991px) {
+      padding-left: 0;
+      padding-right: 24px;
+      padding-top: 40px;
+    }
     &--top {
       .icon {
         margin-bottom: 24px;
+      }
+      h3 {
+        @media (max-width: 991px) {
+          margin-bottom: 24px;
+        }
       }
     }
   }
@@ -22,6 +32,10 @@
     padding-top: 60px;
     padding-bottom: 60px;
     border-bottom: 1px solid #bdbdbd;
+    @media (max-width: 991px) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
     &:nth-child(2) {
       padding-top: 0;
     }
@@ -39,9 +53,17 @@
   background-repeat: no-repeat;
   background-position: bottom left;
   margin-bottom: 60px;
+  @media (max-width: 991px) {
+    height: 125vh;
+  }
   &__content {
     padding-left: 120px;
     max-width: 550px;
+    @media (max-width: 991px) {
+      padding-left: 24px;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
     h1 {
       margin-bottom: 40px;
     }
@@ -59,6 +81,10 @@
     justify-content: end;
     padding-right: 24px;
     position: relative;
+    @media (max-width: 991px) {
+      padding-left: 24px;
+      overflow: hidden;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -73,12 +99,18 @@
   }
   .gallery-col {
     width: 300px;
+    @media (max-width: 767px) {
+      width: calc((100% - 24px) / 2);
+    }
   }
   .gallery-col .img {
     width: 300px;
     height: 100%;
     border-radius: 20px;
     overflow: hidden;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
   }
   .gallery-col .img img {
     width: 100%;

@@ -5,6 +5,10 @@
   .blogs-detail-content {
     padding: 0 120px;
     padding-top: 60px;
+    @media (max-width: 991px) {
+      padding: 0 24px;
+      padding-top: 60px;
+    }
   }
   .the-content-top {
     margin-bottom: 24px;
@@ -23,6 +27,9 @@
   }
   p {
     margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   h5 {
     font-size: 16px;
