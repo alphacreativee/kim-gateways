@@ -1,8 +1,16 @@
 .blogs-list {
   padding: 0 120px;
+  @media (max-width: 991px) {
+    padding: 0px;
+  }
   &__top {
     text-align: center;
     margin-bottom: 40px;
+    h2 {
+      @media (max-width: 991px) {
+        padding: 0 24px;
+      }
+    }
   }
   &__sub {
     gap: 8px;
@@ -16,12 +24,24 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    @media (max-width: 991px) {
+      overflow-x: scroll;
+      padding-left: 24px;
+      padding-right: 24px;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
     .filter-button {
       padding: 12px 24px;
       border-radius: 24px;
       color: var(--color-primary);
       border: 1px solid #d4d3d8;
       transition: all 0.4s;
+      @media (max-width: 991px) {
+        width: max-content;
+        white-space: nowrap;
+      }
       &.active {
         border: 1px solid var(--color-primary);
         background-color: var(--color-primary);
@@ -40,6 +60,11 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 60px 40px;
     margin-bottom: 60px;
+    @media (max-width: 991px) {
+      grid-template-columns: 1fr;
+      padding: 0 24px;
+      gap: 48px;
+    }
   }
   &__item {
     &:hover {
