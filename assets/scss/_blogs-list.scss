@@ -90,6 +90,13 @@
   }
   &__box {
     position: relative;
+    &:hover {
+      .blogs-list__content {
+        .name {
+          color: var(--color-secondary);
+        }
+      }
+    }
   }
   &__tag {
     position: absolute;
@@ -103,6 +110,7 @@
   &__content {
     .name {
       margin-bottom: 12px;
+      transition: all 0.3s;
     }
   }
 }

@@ -1118,6 +1118,9 @@ footer .name {
 .blogs-list__box {
   position: relative;
 }
+.blogs-list__box:hover .blogs-list__content .name {
+  color: var(--color-secondary);
+}
 .blogs-list__tag {
   position: absolute;
   top: 16px;
@@ -1129,6 +1132,7 @@ footer .name {
 }
 .blogs-list__content .name {
   margin-bottom: 12px;
+  transition: all 0.3s;
 }
 
 .section-cta .wrapper-content {
