@@ -29,7 +29,7 @@ function swiperBanner() {
       keyboardControl: true,
       autoplay: {
         delay: 3500,
-        disableOnInteraction: true,
+        disableOnInteraction: true
       },
       on: {
         progress: function (swiper) {
@@ -61,8 +61,8 @@ function swiperBanner() {
               slideInner.style.transition = speed + "ms " + easing;
             }
           });
-        },
-      },
+        }
+      }
     });
   }
 }
@@ -76,11 +76,11 @@ function header() {
     onUpdate: (self) => {
       self.direction === 1 ? $("header").addClass("header--scroll") : "";
       self.progress === 0 ? $("header").removeClass("header--scroll") : "";
-    },
+    }
   });
 }
 
-function togglePopupHeader(event){
+function togglePopupHeader(event) {
   event.preventDefault();
 
   let btnHamburger = $("#header .navbar-toggler");
@@ -121,9 +121,9 @@ function createFilter() {
 
           gsap.to($resultContainer, {
             autoAlpha: 1,
-            duration: 0.25,
+            duration: 0.25
           });
-        },
+        }
       });
     });
   });
@@ -137,7 +137,7 @@ function contactForm() {
   window.intlTelInput(input, {
     initialCountry: "vn",
     separateDialCode: true,
-    loadUtils: () => import("/intl-tel-input/js/utils.js?1733756310855"), // for formatting/placeholders etc
+    loadUtils: () => import("/intl-tel-input/js/utils.js?1733756310855") // for formatting/placeholders etc
   });
 }
 
@@ -263,11 +263,11 @@ var swiper = new Swiper(".mySwiper", {
     delay: 1,
     reverseDirection: true,
     disableOnInteraction: false,
-    pauseOnMouseEnter: false,
+    pauseOnMouseEnter: false
   },
 
   freeMode: true,
-  speed: 10000,
+  speed: 10000
 });
 var swiper2 = new Swiper(".mySwiper2", {
   direction: "vertical",
@@ -277,11 +277,11 @@ var swiper2 = new Swiper(".mySwiper2", {
   autoplay: {
     delay: 1,
     disableOnInteraction: false,
-    pauseOnMouseEnter: false,
+    pauseOnMouseEnter: false
   },
 
   freeMode: true,
-  speed: 10000,
+  speed: 10000
 });
 
 function customDropdown() {
@@ -346,3 +346,27 @@ function customDropdown() {
     }
   });
 }
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray(".data-fade-in").forEach((element, i) => {
+  gsap.fromTo(
+    element,
+    {
+      opacity: 0,
+      y: 20
+    },
+    {
+      scrollTrigger: {
+        trigger: element,
+        start: "top 59%",
+        end: "bottom 59%"
+      },
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: "sine.out",
+      stagger: 0.1
+    }
+  );
+});
