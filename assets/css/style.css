@@ -1560,13 +1560,11 @@ footer .name {
 section.img-with-text {
   position: relative;
 }
-@media (max-width: 991px) {
-  section.img-with-text::after {
-    content: "";
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-    position: absolute;
-    inset: 0;
-  }
+section.img-with-text::after {
+  content: "";
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+  position: absolute;
+  inset: 0;
 }
 section.img-with-text .content {
   position: absolute;
@@ -1702,6 +1700,9 @@ section.img-with-text img {
 
 .section-vission {
   background-image: url("../images/banner.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .section-vission .list-item {
   gap: 40px;

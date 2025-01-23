@@ -359,8 +359,8 @@ gsap.utils.toArray(".data-fade-in").forEach((element, i) => {
     {
       scrollTrigger: {
         trigger: element,
-        start: "top 59%",
-        end: "bottom 59%"
+        start: "top 70%",
+        end: "bottom 70%"
       },
       opacity: 1,
       y: 0,

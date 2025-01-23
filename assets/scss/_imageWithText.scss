@@ -1,13 +1,11 @@
 section.img-with-text{
     position: relative;
 
-    @media (max-width: 991px){
-        &::after{
-            content: "";
-            background-image: linear-gradient( to top, rgba(0,0,0,0.8), transparent);
-            position: absolute;
-            inset: 0;
-        }
+    &::after{
+        content: "";
+        background-image: linear-gradient( to top, rgba(0,0,0,0.4), transparent);
+        position: absolute;
+        inset: 0;
     }
 
     .content{
