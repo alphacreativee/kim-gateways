@@ -208,7 +208,7 @@ function counterOnScroll() {
 }
 
 function coreValue() {
-  if ($(".core-value").length < 1) return;
+  if ($(".core-value").length < 1 || $(window).width() < 992) return;
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -222,7 +222,7 @@ function coreValue() {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".core-value",
-      start: "-140px top",
+      start: "-80px top",
       end: () => "+=" + 100 * panels.length + "%",
       pin: true,
       scrub: 1,

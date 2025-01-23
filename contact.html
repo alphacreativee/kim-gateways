@@ -36,23 +36,37 @@
   </head>
   <body>
     <header id="header" class="header--scroll bg-white">
-      <div class="container">
+      <div class="container-fluild p-0">
         <div class="header__container">
           <div class="row g-0">
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-md-4">
               <a href="./index.html" class="header__logo">
                 <img src="./assets/images/logo-white.svg" alt="logo" class="logo-white" />
                 <img src="./assets/images/logo-black.svg" alt="logo" class="logo-black" />
               </a>
             </div>
-            <div class="col-lg-10">
+            <div class="col-lg-10 col-md-8">
+              <button onclick="togglePopupHeader(event)" class="navbar-toggler btn-toggle" type="button">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+              </button>
+              <div class="header__backdrop" onclick="togglePopupHeader(event)"></div>
               <div
                 class="header__menu d-flex align-items-center justify-content-end h-100"
               >
+                <button onclick="togglePopupHeader(event)" class="navbar-toggler btn-toggle" type="button">
+                  <span class="line"></span>
+                  <span class="line"></span>
+                  <span class="line"></span>
+                </button>
+                <a href="./index.html" class="header__logo">
+                  <img src="./assets/images/logo-black.svg" alt="logo" class="logo-black" />
+                </a>
                 <ul
                   class="d-flex align-items-center justify-content-center gap-20"
                 >
-                  <li>
+                  <li >
                     <a href="./index.html" class="button-f color-white">Trang chủ</a>
                   </li>
                   <li>
@@ -67,10 +81,27 @@
                   <li>
                     <a href="./blogs.html" class="button-f color-white">Blogs</a>
                   </li>
-                  <li class="active">
+                  <li  class="active">
                     <a href="./contact.html" class="button-f color-white">Liên hệ</a>
                   </li>
                 </ul>
+                <div class="header__btn-language dropdown-custom">
+                  <div class="language__head dropdown-custom__btn">
+                    <div class="value-select color-white dropdown-custom__text">
+                      <span>Tiếng Việt</span>
+                    </div>
+                    <div class="ic">
+                      <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.7807 9.85152C16.64 9.71107 16.4494 9.63218 16.2507 9.63218C16.0519 9.63218 15.8613 9.71107 15.7207 9.85152L12.2507 13.3215L8.78066 9.85152C8.712 9.77783 8.6292 9.71873 8.5372 9.67774C8.4452 9.63675 8.34589 9.6147 8.24518 9.61293C8.14448 9.61115 8.04445 9.62968 7.95106 9.6674C7.85767 9.70512 7.77284 9.76126 7.70162 9.83248C7.6304 9.9037 7.57426 9.98853 7.53654 10.0819C7.49882 10.1753 7.48029 10.2753 7.48207 10.376C7.48385 10.4767 7.50589 10.5761 7.54688 10.6681C7.58787 10.7601 7.64697 10.8429 7.72066 10.9115L11.7207 14.9115C11.8613 15.052 12.0519 15.1309 12.2507 15.1309C12.4494 15.1309 12.64 15.052 12.7807 14.9115L16.7807 10.9115C16.9211 10.7709 17 10.5803 17 10.3815C17 10.1828 16.9211 9.99215 16.7807 9.85152Z" fill="white"/>
+                      </svg>  
+                    </div>
+                  </div>
+                  <div class="language__body dropdown-custom__menu">
+                    <a href="#" class="dropdown-custom__item language__item">
+                      <span>English</span>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -184,7 +215,7 @@
     </main>
     <footer>
       <div class="footer-top">
-        <div class="container">
+        <div class="container-fluid p-0">
           <div class="footer-wrapper row g-0">
             <div class="footer-logo col-lg-4">
               <a href="./index.html">
@@ -233,8 +264,8 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <div class="container">
-          <div class="d-flex align-items-center justify-content-between">
+        <div class="footer-bottom__container">
+          <div class="d-flex align-items-center justify-content-between copyright">
             <div class="footer-company d-flex align-items-center">
               <p>© 2024 Kim Gateways</p> <span>•</span> <a href="https://alphacreative.vn/" target="_blank">Digital Experience by Alpha Creative</a>
             </div>

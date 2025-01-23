@@ -18,6 +18,10 @@
   &.bg-white{
     & + .blank-spacing{
       height: 100px;
+
+      @media (max-width: 991px){
+        height: 88px;
+      }
     }
   }
 

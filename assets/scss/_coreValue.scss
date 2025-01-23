@@ -4,6 +4,10 @@
     gap: 80px; /* Khoảng cách giữa hình ảnh và nội dung */
     margin-top: 80px;
 
+    @media (max-width: 991px){
+      margin-top: 32px;
+    }
+
     .wrapper-img {
       width: calc(50% - 40px);
       height: 420px;
@@ -11,6 +15,11 @@
       overflow: hidden;
       position: sticky;
       top: 0;
+
+      @media (max-width: 991px){
+        display: none;
+        position: relative;
+      }
 
       img {
         position: absolute;
@@ -33,6 +42,12 @@
       overflow: hidden;
       position: relative;
 
+      @media (max-width: 992px){
+        width: 100%;
+        min-width: 340px;
+        overflow: visible;
+      }
+
       &::after{
         content: "";
         width: 100%;
@@ -41,6 +56,10 @@
         bottom: 0;
         left: 0;
         background: linear-gradient(to top, #FEF9F3, rgba(255, 255, 255, 0));
+
+        @media (max-width: 991px){
+          display: none;
+        }
       }
 
       .item {
@@ -53,6 +72,29 @@
         background-color: #FEF9F3;
         padding-top: 24px;
         border-top: 1px solid #BDBDBD;
+
+        &:first-child{
+          @media (max-width: 991px){
+            border: none;
+          }
+        }
+
+        @media (max-width: 991px){
+          position: relative;
+          height: auto;
+        }
+
+        &-title{
+          @media (max-width: 991px){
+            margin-top: 24px;
+          }
+        }
+
+        &:not(:last-child){
+          @media (max-width: 991px){
+            margin-bottom: 24px;
+          }
+        }
 
         &::after{
           content: attr(data-number);
@@ -67,6 +109,10 @@
           position: absolute;
           top: 24px;
           right: 0;
+
+          @media (max-width: 991px){
+            display: none;
+          }
         }
       }
 

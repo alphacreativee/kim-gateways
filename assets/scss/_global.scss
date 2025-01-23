@@ -63,6 +63,10 @@ body{
 
 .spacing-80{
   height: 80px;
+
+  @media (max-width: 991px){
+    height: 64px;
+  }
 }
 
 .spacing-120{
@@ -75,6 +79,10 @@ body{
 
 .spacing-240{
   height: 240px;
+
+  @media (max-width: 991px){
+    height: 64px;
+  }
 }
 
 // dropdown
@@ -200,6 +208,10 @@ button.btn-toggle{
 }
 
 .container{
+  @media (min-width: 1400px){
+    max-width: 1200px;
+    padding: 0;
+  }
   @media (max-width: 767px){
     max-width: 100%;
     padding: 0 24px;

@@ -166,6 +166,10 @@ body {
 }
 .spacing {
   height: 80px;
+
+  @media (max-width: 767px){
+    height: 64px;
+  }
 }
 // typography
 .text-uppcase {

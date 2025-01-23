@@ -1,12 +1,28 @@
 section.img-with-text{
     position: relative;
 
+    @media (max-width: 991px){
+        &::after{
+            content: "";
+            background-image: linear-gradient( to top, rgba(0,0,0,0.8), transparent);
+            position: absolute;
+            inset: 0;
+        }
+    }
+
     .content{
         position: absolute;
+        z-index: 2;
         width: 40%;
         top: 50%;
         left: 50%;
         transform: translateY(-50%);
+
+        @media (max-width: 991px){
+            width: calc(100% - 48px);
+            left: unset;
+            right: 24px;
+        }
     }
 
     .desc{
@@ -19,5 +35,9 @@ section.img-with-text{
         max-height: 635px;
         object-position: center;
         object-fit: cover;
+
+        @media (max-width: 767px){
+            min-height: 350px;
+        }
     }
 }

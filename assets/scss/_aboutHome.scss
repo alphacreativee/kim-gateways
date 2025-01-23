@@ -10,7 +10,7 @@
         gap: 80px;
 
         @media (max-width: 991px){
-            flex-direction: column-reverse;
+            flex-direction: column-reverse !important;
         }
 
         @media (max-width: 767px){
@@ -18,7 +18,7 @@
         }
 
         .title{
-            max-width: 85%;
+            max-width: 90%;
 
             @media (max-width: 991px){
                 max-width: 100%;

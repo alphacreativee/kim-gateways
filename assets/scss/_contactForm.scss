@@ -1,8 +1,16 @@
 .contact-form {
   padding: 80px 0;
 
+  @media (max-width: 991px){
+    padding: 64px 0;
+  }
+
   &__left {
     padding: 0 60px;
+
+    @media (max-width: 991px){
+      padding: 0;
+    }
 
     .info {
       margin-top: 24px;
@@ -32,10 +40,19 @@
   &__right {
     padding: 0 60px;
 
+    @media (max-width: 991px){
+      padding: 0;
+      margin-top: 40px;
+    }
+
     form {
       padding: 32px;
       border-radius: 8px;
       background-color: var(--color-white);
+
+      @media (max-width: 991px){
+        padding: 24px;
+      }
 
       .field {
         margin-bottom: 12px;

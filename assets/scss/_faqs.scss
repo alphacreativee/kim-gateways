@@ -1,14 +1,27 @@
 .section-faqs{
     padding: 120px 0;
 
+    @media (max-width: 991px){
+        padding: 64px 0;
+    }
+
     .content-left{
         padding-right: 80px;
         height: max-content;
         position: sticky;
         top: 140px;
+
+        @media (max-width: 991px){
+            padding-right: 0;
+            position: unset;
+        }
     }
 
     .content-right{
+        @media (max-width: 991px){
+            margin-top: 32px;
+        }
+
         .accordion-button{
             box-shadow: none;
             padding: 24px;
@@ -22,6 +35,11 @@
             background-color: transparent;
             // transition: all 0.3s ease;
             position: relative;
+
+            @media (max-width: 767px){
+                font-size: 20px;
+                line-height: 28px;
+              }
 
             &[aria-expanded="true"]{
                 color: var(--color-white);
@@ -73,6 +91,10 @@
 
             &:not(:last-child){
                 margin-bottom: 32px;
+
+                @media (max-width: 991px){
+                    margin-bottom: 24px;
+                }
             }
         }
 

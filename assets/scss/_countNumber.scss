@@ -4,6 +4,16 @@
         border-radius: 12px;
         overflow: hidden;
         background-color: var(--color-white);
+
+        @media (max-width: 991px){
+            padding: 64px 57px;
+        }
+    }
+
+    .number-list{
+        @media (max-width: 991px){
+            row-gap: 24px;
+        }
     }
 
     .number-item{

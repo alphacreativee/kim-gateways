@@ -9,10 +9,20 @@
         position: sticky;
         top: 140px;
         height: max-content;
+        padding-right: 80px;
 
         @media (max-width: 991px){
             position: unset;
             margin-bottom: 32px;
+            padding-right: 0;
+        }
+
+        .title{
+            max-width: 80%;
+
+            @media (max-width: 991px){
+                max-width: 100%;
+            }
         }
 
         .btn--custom{
