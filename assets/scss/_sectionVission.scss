@@ -29,9 +29,11 @@
                 padding: 64px;
                 background: var(--color-white);
                 border-radius: 12px;
+                min-height: 312px;
 
                 @media (max-width: 991px){
                     padding: 32px;
+                    min-height: unset;
                 }
             }
 

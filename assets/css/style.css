@@ -1734,10 +1734,12 @@ section.img-with-text img {
   padding: 64px;
   background: var(--color-white);
   border-radius: 12px;
+  min-height: 312px;
 }
 @media (max-width: 991px) {
   .section-vission .list-item li .item {
     padding: 32px;
+    min-height: unset;
   }
 }
 .section-vission .list-item li .desc {
