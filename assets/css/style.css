@@ -1981,7 +1981,7 @@ section.img-with-text img {
 }
 @media (max-width: 991px) {
   .gallery-sec {
-    height: 125vh;
+    height: unset;
   }
 }
 .gallery-sec__content {
@@ -1992,7 +1992,7 @@ section.img-with-text img {
   .gallery-sec__content {
     padding-left: 24px;
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
   }
 }
 .gallery-sec__content h1 {
@@ -2014,6 +2014,11 @@ section.img-with-text img {
   .gallery-sec .gallery {
     padding-left: 24px;
     overflow: hidden;
+    flex-direction: column;
+    padding: 0;
+    justify-content: flex-start;
+    height: auto;
+    padding-bottom: 60px;
   }
 }
 .gallery-sec .gallery::before {
@@ -2061,8 +2066,20 @@ section.img-with-text img {
   height: 100vh;
   margin: 0;
 }
+@media (max-width: 991px) {
+  .gallery-sec .swiper {
+    width: 100%;
+    height: auto;
+  }
+}
 .gallery-sec .swiper-slide {
   height: 300px;
+}
+@media (max-width: 991px) {
+  .gallery-sec .swiper-slide {
+    height: 200px;
+    width: auto;
+  }
 }
 
 .count-number__wrapper {
@@ -2078,7 +2095,7 @@ section.img-with-text img {
 }
 @media (max-width: 991px) {
   .count-number .number-list {
-    row-gap: 24px;
+    row-gap: 40px;
   }
 }
 .count-number .number-item .number {

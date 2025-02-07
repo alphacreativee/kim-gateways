@@ -35,61 +35,72 @@
   </head>
   <body>
     <header id="header">
-      <div class="container">
+      <div class="container-fluild p-0">
         <div class="header__container">
           <div class="row g-0">
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-md-4">
               <a href="./index.html" class="header__logo">
-                <img
-                  src="./assets/images/logo-white.svg"
-                  alt="logo"
-                  class="logo-white"
-                />
-                <img
-                  src="./assets/images/logo-black.svg"
-                  alt="logo"
-                  class="logo-black"
-                />
+                <img src="./assets/images/logo-white.svg" alt="logo" class="logo-white" />
+                <img src="./assets/images/logo-black.svg" alt="logo" class="logo-black" />
               </a>
             </div>
-            <div class="col-lg-10">
+            <div class="col-lg-10 col-md-8">
+              <button onclick="togglePopupHeader(event)" class="navbar-toggler btn-toggle" type="button">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+              </button>
+              <div class="header__backdrop" onclick="togglePopupHeader(event)"></div>
               <div
                 class="header__menu d-flex align-items-center justify-content-end h-100"
               >
+                <button onclick="togglePopupHeader(event)" class="navbar-toggler btn-toggle" type="button">
+                  <span class="line"></span>
+                  <span class="line"></span>
+                  <span class="line"></span>
+                </button>
+                <a href="./index.html" class="header__logo">
+                  <img src="./assets/images/logo-black.svg" alt="logo" class="logo-black" />
+                </a>
                 <ul
                   class="d-flex align-items-center justify-content-center gap-20"
                 >
                   <li>
-                    <a href="./index.html" class="button-f color-white"
-                      >Trang chủ</a
-                    >
+                    <a href="./index.html" class="button-f color-white">Trang chủ</a>
                   </li>
                   <li>
-                    <a href="./about.html" class="button-f color-white"
-                      >Về Kim Gateways</a
-                    >
+                    <a href="./about.html" class="button-f color-white">Về Kim Gateways</a>
                   </li>
                   <li>
-                    <a href="./services.html" class="button-f color-white"
-                      >Dịch vụ</a
-                    >
+                    <a href="./services.html" class="button-f color-white">Dịch vụ</a>
                   </li>
                   <li>
-                    <a href="./tours.html" class="button-f color-white"
-                      >Tours</a
-                    >
-                  </li>
-                  <li class="active">
-                    <a href="./blogs.html" class="button-f color-white"
-                      >Blogs</a
-                    >
+                    <a href="./tours.html" class="button-f color-white">Tours</a>
                   </li>
                   <li>
-                    <a href="./contact.html" class="button-f color-white"
-                      >Liên hệ</a
-                    >
+                    <a href="./blogs.html" class="button-f color-white">Blogs</a>
+                  </li>
+                  <li>
+                    <a href="./contact.html" class="button-f color-white">Liên hệ</a>
                   </li>
                 </ul>
+                <div class="header__btn-language dropdown-custom">
+                  <div class="language__head dropdown-custom__btn">
+                    <div class="value-select color-white dropdown-custom__text">
+                      <span>Tiếng Việt</span>
+                    </div>
+                    <div class="ic">
+                      <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.7807 9.85152C16.64 9.71107 16.4494 9.63218 16.2507 9.63218C16.0519 9.63218 15.8613 9.71107 15.7207 9.85152L12.2507 13.3215L8.78066 9.85152C8.712 9.77783 8.6292 9.71873 8.5372 9.67774C8.4452 9.63675 8.34589 9.6147 8.24518 9.61293C8.14448 9.61115 8.04445 9.62968 7.95106 9.6674C7.85767 9.70512 7.77284 9.76126 7.70162 9.83248C7.6304 9.9037 7.57426 9.98853 7.53654 10.0819C7.49882 10.1753 7.48029 10.2753 7.48207 10.376C7.48385 10.4767 7.50589 10.5761 7.54688 10.6681C7.58787 10.7601 7.64697 10.8429 7.72066 10.9115L11.7207 14.9115C11.8613 15.052 12.0519 15.1309 12.2507 15.1309C12.4494 15.1309 12.64 15.052 12.7807 14.9115L16.7807 10.9115C16.9211 10.7709 17 10.5803 17 10.3815C17 10.1828 16.9211 9.99215 16.7807 9.85152Z" fill="white"/>
+                      </svg>  
+                    </div>
+                  </div>
+                  <div class="language__body dropdown-custom__menu">
+                    <a href="#" class="dropdown-custom__item language__item">
+                      <span>English</span>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -259,59 +270,32 @@
     </main>
     <footer>
       <div class="footer-top">
-        <div class="container">
+        <div class="container-fluid p-0">
           <div class="footer-wrapper row g-0">
             <div class="footer-logo col-lg-4">
               <a href="./index.html">
-                <img src="./assets/images/logo-white.svg" alt="" />
+                <img src="./assets/images/logo-white.svg" alt="">
               </a>
               <ul class="footer-social d-flex align-items-center">
                 <li>
                   <a href="#">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M14 13.5098H16.5L17.5 9.50977H14V7.50977C14 6.47977 14 5.50977 16 5.50977H17.5V2.14977C17.174 2.10677 15.943 2.00977 14.643 2.00977C11.928 2.00977 10 3.66677 10 6.70977V9.50977H7V13.5098H10V22.0098H14V13.5098Z"
-                        fill="white"
-                      />
-                    </svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 13.5098H16.5L17.5 9.50977H14V7.50977C14 6.47977 14 5.50977 16 5.50977H17.5V2.14977C17.174 2.10677 15.943 2.00977 14.643 2.00977C11.928 2.00977 10 3.66677 10 6.70977V9.50977H7V13.5098H10V22.0098H14V13.5098Z" fill="white"/>
+                    </svg>  
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M12.0048 6.61953C9.02354 6.61953 6.61885 9.02422 6.61885 12.0055C6.61885 14.9867 9.02354 17.3914 12.0048 17.3914C14.986 17.3914 17.3907 14.9867 17.3907 12.0055C17.3907 9.02422 14.986 6.61953 12.0048 6.61953ZM12.0048 15.507C10.0782 15.507 8.50322 13.9367 8.50322 12.0055C8.50322 10.0742 10.0735 8.50391 12.0048 8.50391C13.936 8.50391 15.5063 10.0742 15.5063 12.0055C15.5063 13.9367 13.9313 15.507 12.0048 15.507ZM18.8673 6.39922C18.8673 7.09766 18.3048 7.65547 17.611 7.65547C16.9126 7.65547 16.3548 7.09297 16.3548 6.39922C16.3548 5.70547 16.9173 5.14297 17.611 5.14297C18.3048 5.14297 18.8673 5.70547 18.8673 6.39922ZM22.4345 7.67422C22.3548 5.99141 21.9704 4.50078 20.7376 3.27266C19.5095 2.04453 18.0188 1.66016 16.336 1.57578C14.6017 1.47734 9.40322 1.47734 7.66885 1.57578C5.99072 1.65547 4.5001 2.03984 3.26729 3.26797C2.03447 4.49609 1.65479 5.98672 1.57041 7.66953C1.47197 9.40391 1.47197 14.6023 1.57041 16.3367C1.6501 18.0195 2.03447 19.5102 3.26729 20.7383C4.5001 21.9664 5.98604 22.3508 7.66885 22.4352C9.40322 22.5336 14.6017 22.5336 16.336 22.4352C18.0188 22.3555 19.5095 21.9711 20.7376 20.7383C21.9657 19.5102 22.3501 18.0195 22.4345 16.3367C22.5329 14.6023 22.5329 9.40859 22.4345 7.67422ZM20.1938 18.1977C19.8282 19.1164 19.1204 19.8242 18.197 20.1945C16.8142 20.743 13.5329 20.6164 12.0048 20.6164C10.4767 20.6164 7.19072 20.7383 5.8126 20.1945C4.89385 19.8289 4.18604 19.1211 3.81572 18.1977C3.26729 16.8148 3.39385 13.5336 3.39385 12.0055C3.39385 10.4773 3.27197 7.19141 3.81572 5.81328C4.18135 4.89453 4.88916 4.18672 5.8126 3.81641C7.19541 3.26797 10.4767 3.39453 12.0048 3.39453C13.5329 3.39453 16.8188 3.27266 18.197 3.81641C19.1157 4.18203 19.8235 4.88984 20.1938 5.81328C20.7423 7.19609 20.6157 10.4773 20.6157 12.0055C20.6157 13.5336 20.7423 16.8195 20.1938 18.1977Z"
-                        fill="white"
-                      />
-                    </svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.0048 6.61953C9.02354 6.61953 6.61885 9.02422 6.61885 12.0055C6.61885 14.9867 9.02354 17.3914 12.0048 17.3914C14.986 17.3914 17.3907 14.9867 17.3907 12.0055C17.3907 9.02422 14.986 6.61953 12.0048 6.61953ZM12.0048 15.507C10.0782 15.507 8.50322 13.9367 8.50322 12.0055C8.50322 10.0742 10.0735 8.50391 12.0048 8.50391C13.936 8.50391 15.5063 10.0742 15.5063 12.0055C15.5063 13.9367 13.9313 15.507 12.0048 15.507ZM18.8673 6.39922C18.8673 7.09766 18.3048 7.65547 17.611 7.65547C16.9126 7.65547 16.3548 7.09297 16.3548 6.39922C16.3548 5.70547 16.9173 5.14297 17.611 5.14297C18.3048 5.14297 18.8673 5.70547 18.8673 6.39922ZM22.4345 7.67422C22.3548 5.99141 21.9704 4.50078 20.7376 3.27266C19.5095 2.04453 18.0188 1.66016 16.336 1.57578C14.6017 1.47734 9.40322 1.47734 7.66885 1.57578C5.99072 1.65547 4.5001 2.03984 3.26729 3.26797C2.03447 4.49609 1.65479 5.98672 1.57041 7.66953C1.47197 9.40391 1.47197 14.6023 1.57041 16.3367C1.6501 18.0195 2.03447 19.5102 3.26729 20.7383C4.5001 21.9664 5.98604 22.3508 7.66885 22.4352C9.40322 22.5336 14.6017 22.5336 16.336 22.4352C18.0188 22.3555 19.5095 21.9711 20.7376 20.7383C21.9657 19.5102 22.3501 18.0195 22.4345 16.3367C22.5329 14.6023 22.5329 9.40859 22.4345 7.67422ZM20.1938 18.1977C19.8282 19.1164 19.1204 19.8242 18.197 20.1945C16.8142 20.743 13.5329 20.6164 12.0048 20.6164C10.4767 20.6164 7.19072 20.7383 5.8126 20.1945C4.89385 19.8289 4.18604 19.1211 3.81572 18.1977C3.26729 16.8148 3.39385 13.5336 3.39385 12.0055C3.39385 10.4773 3.27197 7.19141 3.81572 5.81328C4.18135 4.89453 4.88916 4.18672 5.8126 3.81641C7.19541 3.26797 10.4767 3.39453 12.0048 3.39453C13.5329 3.39453 16.8188 3.27266 18.197 3.81641C19.1157 4.18203 19.8235 4.88984 20.1938 5.81328C20.7423 7.19609 20.6157 10.4773 20.6157 12.0055C20.6157 13.5336 20.7423 16.8195 20.1938 18.1977Z" fill="white"/>
+                    </svg>  
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M22.9024 6.51322C22.6407 5.52781 21.8696 4.75172 20.8906 4.48835C19.116 4.00977 12.0001 4.00977 12.0001 4.00977C12.0001 4.00977 4.88427 4.00977 3.10965 4.48835C2.13061 4.75177 1.35952 5.52781 1.09781 6.51322C0.622314 8.29935 0.622314 12.0259 0.622314 12.0259C0.622314 12.0259 0.622314 15.7525 1.09781 17.5386C1.35952 18.5241 2.13061 19.2678 3.10965 19.5312C4.88427 20.0098 12.0001 20.0098 12.0001 20.0098C12.0001 20.0098 19.1159 20.0098 20.8906 19.5312C21.8696 19.2678 22.6407 18.5241 22.9024 17.5386C23.3779 15.7525 23.3779 12.0259 23.3779 12.0259C23.3779 12.0259 23.3779 8.29935 22.9024 6.51322ZM9.67282 15.4094V8.64247L15.6203 12.026L9.67282 15.4094Z"
-                        fill="white"
-                      />
-                    </svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.9024 6.51322C22.6407 5.52781 21.8696 4.75172 20.8906 4.48835C19.116 4.00977 12.0001 4.00977 12.0001 4.00977C12.0001 4.00977 4.88427 4.00977 3.10965 4.48835C2.13061 4.75177 1.35952 5.52781 1.09781 6.51322C0.622314 8.29935 0.622314 12.0259 0.622314 12.0259C0.622314 12.0259 0.622314 15.7525 1.09781 17.5386C1.35952 18.5241 2.13061 19.2678 3.10965 19.5312C4.88427 20.0098 12.0001 20.0098 12.0001 20.0098C12.0001 20.0098 19.1159 20.0098 20.8906 19.5312C21.8696 19.2678 22.6407 18.5241 22.9024 17.5386C23.3779 15.7525 23.3779 12.0259 23.3779 12.0259C23.3779 12.0259 23.3779 8.29935 22.9024 6.51322ZM9.67282 15.4094V8.64247L15.6203 12.026L9.67282 15.4094Z" fill="white"/>
+                    </svg>   
                   </a>
                 </li>
               </ul>
@@ -321,36 +305,24 @@
                 <div class="name color-white font-bold">Liên hệ chúng tôi</div>
                 <a href="tel:+84909737747">+84 90 9737 747</a>
                 <a href="mailto:info@kimgateways.com">info@kimgateways.com</a>
-                <p>
-                  3/9 Hùng Long Tự 1, Ấp Suối Đá, Dương Tơ, P. Dương Đông, TP.
-                  Phú Quốc, Kiên Giang
-                </p>
+                <p>3/9 Hùng Long Tự 1, Ấp Suối Đá, Dương Tơ, P. Dương Đông, TP. Phú Quốc, Kiên Giang</p>
               </div>
             </div>
             <div class="footer-consult col-lg-4">
               <div class="name color-white font-bold">Nhận tư vấn</div>
               <form action="#">
-                <input
-                  type="text"
-                  placeholder="Nhập email hoặc số điện thoại"
-                />
-                <button type="submit" class="btn--custom btn--secondary">
-                  Gửi
-                </button>
+                <input type="text" placeholder="Nhập email hoặc số điện thoại">
+                <button type="submit" class="btn--custom btn--secondary">Gửi</button>
               </form>
             </div>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <div class="container">
-          <div class="d-flex align-items-center justify-content-between">
+        <div class="footer-bottom__container">
+          <div class="d-flex align-items-center justify-content-between copyright">
             <div class="footer-company d-flex align-items-center">
-              <p>© 2024 Kim Gateways</p>
-              <span>•</span>
-              <a href="https://alphacreative.vn/" target="_blank"
-                >Digital Experience by Alpha Creative</a
-              >
+              <p>© 2024 Kim Gateways</p> <span>•</span> <a href="https://alphacreative.vn/" target="_blank">Digital Experience by Alpha Creative</a>
             </div>
             <ul class="footer-policy d-flex align-items-center">
               <li>

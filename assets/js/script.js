@@ -9,6 +9,7 @@ $(document).ready(function () {
   counterOnScroll();
   coreValue();
   customDropdown();
+  gallerySwiper();
 });
 
 gsap.registerPlugin(ScrollTrigger);
@@ -219,10 +220,12 @@ function coreValue() {
     yPercent: (i) => (i ? 100 : 0)
   });
 
+  const positionTop = ($(window).width() > 1440) ? '-140px' : '-80px';
+
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".core-value",
-      start: "-80px top",
+      start: `${positionTop} top`,
       end: () => "+=" + 100 * panels.length + "%",
       pin: true,
       scrub: 1,
@@ -254,35 +257,41 @@ function coreValue() {
   });
 }
 // ///////////
-var swiper = new Swiper(".mySwiper", {
-  direction: "vertical",
-  slidesPerView: "auto",
-  loop: true,
-  spaceBetween: 24,
-  autoplay: {
-    delay: 1,
-    reverseDirection: true,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: false
-  },
 
-  freeMode: true,
-  speed: 10000
-});
-var swiper2 = new Swiper(".mySwiper2", {
-  direction: "vertical",
-  slidesPerView: "auto",
-  loop: true,
-  spaceBetween: 24,
-  autoplay: {
-    delay: 1,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: false
-  },
+function gallerySwiper(){
+  const direction = ($(window).width() > 767) ? 'vertical' : 'horizontal';
 
-  freeMode: true,
-  speed: 10000
-});
+  var swiper = new Swiper(".mySwiper", {
+    direction: direction,
+    slidesPerView: "auto",
+    loop: true,
+    spaceBetween: 24,
+    autoplay: {
+      delay: 1,
+      reverseDirection: true,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: false
+    },
+  
+    freeMode: true,
+    speed: 10000
+  });
+
+  var swiper2 = new Swiper(".mySwiper2", {
+    direction: direction,
+    slidesPerView: "auto",
+    loop: true,
+    spaceBetween: 24,
+    autoplay: {
+      delay: 1,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: false
+    },
+  
+    freeMode: true,
+    speed: 10000
+  });
+}
 
 function customDropdown() {
   const $dropdowns = $(".dropdown-custom");

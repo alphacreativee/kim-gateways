@@ -54,7 +54,7 @@
   background-position: bottom left;
   margin-bottom: 60px;
   @media (max-width: 991px) {
-    height: 125vh;
+    height: unset;
   }
   &__content {
     padding-left: 120px;
@@ -62,7 +62,7 @@
     @media (max-width: 991px) {
       padding-left: 24px;
       padding-top: 60px;
-      padding-bottom: 60px;
+      padding-bottom: 40px;
     }
     h1 {
       margin-bottom: 40px;
@@ -84,6 +84,11 @@
     @media (max-width: 991px) {
       padding-left: 24px;
       overflow: hidden;
+      flex-direction: column;
+      padding: 0;
+      justify-content: flex-start;
+      height: auto;
+      padding-bottom: 60px;
     }
     &::before {
       content: "";
@@ -130,8 +135,18 @@
     width: 300px;
     height: 100vh;
     margin: 0;
+
+    @media (max-width: 991px){
+      width: 100%;
+      height: auto;
+    }
   }
   .swiper-slide {
     height: 300px;
+
+    @media (max-width: 991px){
+      height: 200px;
+      width: auto;
+    }
   }
 }
